@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="app_core_hellomultiverse" />
+		<Option title="scorpionilluminati_beatmapper" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="basis">
-				<Option output="../../../time/x64/basis/libapp_core_hellomultiverse.so" prefix_auto="0" extension_auto="0" />
+				<Option output="../../../time/x64/basis/libscorpionilluminati_beatmapper.so" prefix_auto="0" extension_auto="0" />
 				<Option working_dir="../../../time/x64/basis/" />
-				<Option object_output="../../../time/intermediate/app/app_core_hellomultiverse" />
+				<Option object_output="../../../time/intermediate/app/scorpionilluminati_beatmapper" />
 				<Option type="3" />
 				<Option compiler="gcc" />
-				<Option host_application="../../../time/x64/basis/app_core_hellomultiverse" />
+				<Option host_application="../../../time/x64/basis/scorpionilluminati_beatmapper" />
 				<Option run_host_application_in_terminal="0" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
@@ -23,13 +23,13 @@
 				</Compiler>
 			</Target>
 			<Target title="install">
-				<Option output="../../../time/x64/basis/libapp_core_hellomultiverse.so" prefix_auto="0" extension_auto="0" />
+				<Option output="../../../time/x64/basis/libscorpionilluminati_beatmapper.so" prefix_auto="0" extension_auto="0" />
 				<Option working_dir="../../../time/x64/basis/" />
-				<Option object_output="../../../time/intermediate/app/app_core_hellomultiverse" />
+				<Option object_output="../../../time/intermediate/app/scorpionilluminati_beatmapper" />
 				<Option type="3" />
 				<Option compiler="gcc" />
 				<Option parameters=": install" />
-				<Option host_application="../../../time/x64/basis/app_core_hellomultiverse" />
+				<Option host_application="../../../time/x64/basis/scorpionilluminati_beatmapper" />
 				<Option run_host_application_in_terminal="0" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
@@ -89,38 +89,38 @@
 			<Add directory="../../../time/x64/basis" />
 		</Linker>
 		<ExtraCommands>
-			<Add after='g++ -DMAINAPPID=\\\&quot;app-core/hellomultiverse\\\&quot; -std=c++14 -fexceptions -fnon-call-exceptions -fno-pie -fno-stack-protector -Wno-pointer-arith -Wno-attributes -Winvalid-pch -Wno-conversion-null -fPIC -pg -g -D_DEBUG -I../../../include -I../../../app/include -I../../../app/thirdparty/appseed -I. -I.. -I../.. -I../../../app/appseed/boot -I../../../app/appseed/core -I../../../app/appseed -I../../../app -I../../../app/thirdparty/include -I../../.. -I../../../app/appseed/base -I../../../../ca2 -I../../../app/appseed/aura -I../../../app/appseed/axis -c ../../../nodeapp/appseed/app/main.cpp -o ../../../time/intermediate/nodeapp/app/main.cpp.o' />
-			<Add after="g++ -L../../../time/x64/basis -L/usr/lib64/mysql/ -o ../../../time/x64/basis/app_core_hellomultiverse ../../../time/intermediate/nodeapp/app/main.cpp.o  -Wl,-rpath=\\$$ORIGIN -laura -Wl,-z,defs -pg" />
+			<Add after='g++ -DMAINAPPID=\\\&quot;app-core/beatmapper\\\&quot; -std=c++14 -fexceptions -fnon-call-exceptions -fno-pie -fno-stack-protector -Wno-pointer-arith -Wno-attributes -Winvalid-pch -Wno-conversion-null -fPIC -pg -g -D_DEBUG -I../../../include -I../../../app/include -I../../../app/thirdparty/appseed -I. -I.. -I../.. -I../../../app/appseed/boot -I../../../app/appseed/core -I../../../app/appseed -I../../../app -I../../../app/thirdparty/include -I../../.. -I../../../app/appseed/base -I../../../../ca2 -I../../../app/appseed/aura -I../../../app/appseed/axis -c ../../../nodeapp/appseed/app/main.cpp -o ../../../time/intermediate/nodeapp/app/main.cpp.o' />
+			<Add after="g++ -L../../../time/x64/basis -L/usr/lib64/mysql/ -o ../../../time/x64/basis/scorpionilluminati_beatmapper ../../../time/intermediate/nodeapp/app/main.cpp.o  -Wl,-rpath=\\$$ORIGIN -laura -Wl,-z,defs -pg" />
 			<Mode after="always" />
 		</ExtraCommands>
 		<Unit filename="framework.h">
 			<Option compile="1" />
 			<Option weight="0" />
 		</Unit>
-		<Unit filename="hellomultiverse.h" />
-		<Unit filename="hellomultiverse_application.cpp" />
-		<Unit filename="hellomultiverse_application.h" />
-		<Unit filename="hellomultiverse_document.cpp" />
-		<Unit filename="hellomultiverse_frame.cpp" />
-		<Unit filename="hellomultiverse_frame.h" />
-		<Unit filename="hellomultiverse_gcom.cpp" />
-		<Unit filename="hellomultiverse_gcom.h" />
-		<Unit filename="hellomultiverse_main_frame.cpp" />
-		<Unit filename="hellomultiverse_main_frame.h" />
-		<Unit filename="hellomultiverse_main_view.cpp" />
-		<Unit filename="hellomultiverse_main_view.h" />
-		<Unit filename="hellomultiverse_pane_view.cpp" />
-		<Unit filename="hellomultiverse_pane_view.h" />
-		<Unit filename="hellomultiverse_pane_view_update_hint.cpp" />
-		<Unit filename="hellomultiverse_pane_view_update_hint.h" />
-		<Unit filename="hellomultiverse_render.cpp" />
-		<Unit filename="hellomultiverse_render.h" />
-		<Unit filename="hellomultiverse_switcher_view.cpp" />
-		<Unit filename="hellomultiverse_switcher_view.h" />
-		<Unit filename="hellomultiverse_view.cpp" />
-		<Unit filename="hellomultiverse_view.h" />
-		<Unit filename="hellomultiverse_view_base.cpp" />
-		<Unit filename="hellomultiverse_view_base.h" />
+		<Unit filename="beatmapper.h" />
+		<Unit filename="beatmapper_application.cpp" />
+		<Unit filename="beatmapper_application.h" />
+		<Unit filename="beatmapper_document.cpp" />
+		<Unit filename="beatmapper_frame.cpp" />
+		<Unit filename="beatmapper_frame.h" />
+		<Unit filename="beatmapper_gcom.cpp" />
+		<Unit filename="beatmapper_gcom.h" />
+		<Unit filename="beatmapper_main_frame.cpp" />
+		<Unit filename="beatmapper_main_frame.h" />
+		<Unit filename="beatmapper_main_view.cpp" />
+		<Unit filename="beatmapper_main_view.h" />
+		<Unit filename="beatmapper_pane_view.cpp" />
+		<Unit filename="beatmapper_pane_view.h" />
+		<Unit filename="beatmapper_pane_view_update_hint.cpp" />
+		<Unit filename="beatmapper_pane_view_update_hint.h" />
+		<Unit filename="beatmapper_render.cpp" />
+		<Unit filename="beatmapper_render.h" />
+		<Unit filename="beatmapper_switcher_view.cpp" />
+		<Unit filename="beatmapper_switcher_view.h" />
+		<Unit filename="beatmapper_view.cpp" />
+		<Unit filename="beatmapper_view.h" />
+		<Unit filename="beatmapper_view_base.cpp" />
+		<Unit filename="beatmapper_view_base.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

@@ -1,8 +1,8 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include <math.h>
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
@@ -113,7 +113,7 @@ namespace hellomultiverse
 
       }
 
-      set_hellomultiverse(strText);
+      set_beatmapper(strText);
 
       if(Application.m_etype == application::type_normal)
       {
@@ -139,7 +139,7 @@ namespace hellomultiverse
 
          synch_lock slText(&m_mutexText);
 
-         if(m_strNewHelloMultiverse.is_empty())
+         if(m_strNewBeatMapper.is_empty())
          {
 
             if(m_prender->m_bFastOnEmpty)
@@ -199,7 +199,7 @@ namespace hellomultiverse
 
                peditview->_001GetText(strText);
 
-               set_hellomultiverse(strText);
+               set_beatmapper(strText);
 
             }
 
@@ -274,12 +274,12 @@ namespace hellomultiverse
    }
 
 
-   string view::get_processed_hellomultiverse()
+   string view::get_processed_beatmapper()
    {
 
       synch_lock slText(&m_mutexText);
 
-      string str = get_hellomultiverse();
+      string str = get_beatmapper();
 
       int c = m_ppcreutil->matches(str);
 
@@ -385,19 +385,19 @@ namespace hellomultiverse
    }
 
 
-   string view::get_hellomultiverse()
+   string view::get_beatmapper()
    {
 
       synch_lock sl(&m_mutexText);
 
-      if(m_strHelloMultiverse != m_strNewHelloMultiverse)
+      if(m_strBeatMapper != m_strNewBeatMapper)
       {
 
-         m_strHelloMultiverse = m_strNewHelloMultiverse;
+         m_strBeatMapper = m_strNewBeatMapper;
 
       }
 
-      if(m_strHelloMultiverse.is_empty())
+      if(m_strBeatMapper.is_empty())
       {
 
          if(m_prender->m_bAlternate)
@@ -405,11 +405,11 @@ namespace hellomultiverse
 
             if(m_dFps != 0.0)
             {
-               return "Rolling " + Application.m_strAlternateHelloMultiverse;
+               return "Rolling " + Application.m_strAlternateBeatMapper;
             }
             else
             {
-               return Application.m_strAlternateHelloMultiverse;
+               return Application.m_strAlternateBeatMapper;
             }
 
 
@@ -419,11 +419,11 @@ namespace hellomultiverse
 
             if(m_dFps != 0.0)
             {
-               return "Rolling " + Application.m_strHelloMultiverse;
+               return "Rolling " + Application.m_strBeatMapper;
             }
             else
             {
-               return Application.m_strHelloMultiverse;
+               return Application.m_strBeatMapper;
             }
 
 
@@ -433,7 +433,7 @@ namespace hellomultiverse
       else
       {
 
-         return m_strHelloMultiverse;
+         return m_strBeatMapper;
 
       }
 
@@ -448,10 +448,10 @@ namespace hellomultiverse
 
          synch_lock sl(&m_mutexText);
 
-         if (get_processed_hellomultiverse() != m_prender->m_strHelloMultiverse)
+         if (get_processed_beatmapper() != m_prender->m_strBeatMapper)
          {
 
-            m_prender->m_strHelloMultiverse = get_processed_hellomultiverse().c_str(); // rationale : string allocation fork *for multithreading*
+            m_prender->m_strBeatMapper = get_processed_beatmapper().c_str(); // rationale : string allocation fork *for multithreading*
 
             sl.unlock();
 
@@ -490,16 +490,16 @@ namespace hellomultiverse
 
    }
 
-   void view::set_hellomultiverse(string strText)
+   void view::set_beatmapper(string strText)
    {
 
-      m_strNewHelloMultiverse = strText;
+      m_strNewBeatMapper = strText;
 
       data_set("cur_text", strText);
 
    }
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 

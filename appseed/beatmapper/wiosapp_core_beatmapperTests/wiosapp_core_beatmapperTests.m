@@ -1,6 +1,6 @@
-//
-//  wiosapp_core_hellomultiverseTests.m
-//  wiosapp_core_hellomultiverseTests
+﻿//
+//  wiosscorpionilluminati_beatmapperTests.m
+//  wiosscorpionilluminati_beatmapperTests
 //
 //  Created by Camilo Sasuke Tsumanuma on 12/05/14.
 //  Copyright (c) 2014 Camilo Sasuke Tsumanuma. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface wiosapp_core_hellomultiverseTests : XCTestCase
+@interface wiosscorpionilluminati_beatmapperTests : XCTestCase
 
 @end
 
-@implementation wiosapp_core_hellomultiverseTests
+@implementation wiosscorpionilluminati_beatmapperTests
 
 - (void)setUp
 {

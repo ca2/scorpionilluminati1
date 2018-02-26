@@ -27,10 +27,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C7AFCEFA-3079-4B23-8F97-4543BB980265}</ProjectGuid>
-    <RootNamespace>app_core_hellomultiverse</RootNamespace>
+    <ProjectGuid>{188CF8F3-FC6C-4DC6-9902-4E41FA7A7127}</ProjectGuid>
+    <RootNamespace>scorpionilluminati_beatmapper</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>app_core_hellomultiverse</ProjectName>
+    <ProjectName>scorpionilluminati_beatmapper</ProjectName>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -147,7 +147,7 @@
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../nodeapp/$(PlatformName)/include;$(SolutionDir)../../../nodeapp/include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_HELLOMULTIVERSE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SCORPIONILLUMINATI_BEATMAPPER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -243,7 +243,7 @@
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../nodeapp/$(PlatformName)/include;$(SolutionDir)../../../nodeapp/include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_HELLOMULTIVERSE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SCORPIONILLUMINATI_BEATMAPPER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -339,7 +339,7 @@
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../nodeapp/$(PlatformName)/include;$(SolutionDir)../../../nodeapp/include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_HELLOMULTIVERSE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SCORPIONILLUMINATI_BEATMAPPER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -448,7 +448,7 @@
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../nodeapp/$(PlatformName)/include;$(SolutionDir)../../../nodeapp/include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_HELLOMULTIVERSE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SCORPIONILLUMINATI_BEATMAPPER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -533,7 +533,7 @@
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../nodeapp/$(PlatformName)/include;$(SolutionDir)../../../nodeapp/include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_HELLOMULTIVERSE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SCORPIONILLUMINATI_BEATMAPPER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -620,7 +620,7 @@
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../../../include;$(SolutionDir)../../../nodeapp/$(PlatformName)/include;$(SolutionDir)../../../nodeapp/include;$(SolutionDir)../../../app/include;.;$(ProjectDir)framework;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../app;$(SolutionDir)../../../app/appseed;$(SolutionDir)../../../app/appseed/core;$(SolutionDir)../../../app/appseed/base;$(SolutionDir)../../../app/appseed/axis;$(SolutionDir)../../../app/appseed/aura;$(SolutionDir)../../;$(ProjectDir)../../appseed;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_APP_CORE_HELLOMULTIVERSE_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_SCORPIONILLUMINATI_BEATMAPPER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Async</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -708,12 +708,12 @@
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include=".\hellomultiverse_application.cpp" />
-    <ClCompile Include=".\hellomultiverse_document.cpp" />
-    <ClCompile Include=".\hellomultiverse_frame.cpp" />
-    <ClCompile Include="hellomultiverse.cpp" />
-    <ClCompile Include=".\hellomultiverse_pane_view.cpp" />
-    <ClCompile Include=".\hellomultiverse_pane_view_update_hint.cpp" />
+    <ClCompile Include=".\beatmapper_application.cpp" />
+    <ClCompile Include=".\beatmapper_document.cpp" />
+    <ClCompile Include=".\beatmapper_frame.cpp" />
+    <ClCompile Include="beatmapper.cpp" />
+    <ClCompile Include=".\beatmapper_pane_view.cpp" />
+    <ClCompile Include=".\beatmapper_pane_view_update_hint.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">Create</PrecompiledHeader>
@@ -722,34 +722,34 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cover|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include=".\hellomultiverse_view.cpp" />
-    <ClCompile Include="hellomultiverse_gcom.cpp" />
-    <ClCompile Include="hellomultiverse_main_frame.cpp" />
-    <ClCompile Include="hellomultiverse_main_view.cpp" />
-    <ClCompile Include="hellomultiverse_render.cpp" />
-    <ClCompile Include="hellomultiverse_switcher_view.cpp" />
-    <ClCompile Include="hellomultiverse_view_base.cpp" />
+    <ClCompile Include=".\beatmapper_view.cpp" />
+    <ClCompile Include="beatmapper_gcom.cpp" />
+    <ClCompile Include="beatmapper_main_frame.cpp" />
+    <ClCompile Include="beatmapper_main_view.cpp" />
+    <ClCompile Include="beatmapper_render.cpp" />
+    <ClCompile Include="beatmapper_switcher_view.cpp" />
+    <ClCompile Include="beatmapper_view_base.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="hellomultiverse_application.h" />
-    <ClInclude Include="hellomultiverse_document.h" />
-    <ClInclude Include="hellomultiverse_frame.h" />
-    <ClInclude Include="hellomultiverse.h" />
-    <ClInclude Include="hellomultiverse_gcom.h" />
-    <ClInclude Include="hellomultiverse_main_frame.h" />
-    <ClInclude Include="hellomultiverse_main_view.h" />
-    <ClInclude Include="hellomultiverse_pane_view.h" />
-    <ClInclude Include="hellomultiverse_pane_view_update_hint.h" />
+    <ClInclude Include="beatmapper_application.h" />
+    <ClInclude Include="beatmapper_document.h" />
+    <ClInclude Include="beatmapper_frame.h" />
+    <ClInclude Include="beatmapper.h" />
+    <ClInclude Include="beatmapper_gcom.h" />
+    <ClInclude Include="beatmapper_main_frame.h" />
+    <ClInclude Include="beatmapper_main_view.h" />
+    <ClInclude Include="beatmapper_pane_view.h" />
+    <ClInclude Include="beatmapper_pane_view_update_hint.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="hellomultiverse_render.h" />
-    <ClInclude Include="hellomultiverse_switcher_view.h" />
-    <ClInclude Include="hellomultiverse_view.h" />
-    <ClInclude Include="hellomultiverse_view_base.h" />
+    <ClInclude Include="beatmapper_render.h" />
+    <ClInclude Include="beatmapper_switcher_view.h" />
+    <ClInclude Include="beatmapper_view.h" />
+    <ClInclude Include="beatmapper_view_base.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".\app_core_hellomultiverse.def" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\..\..\app-core\appseed\gcom\gcom.vcxproj">
+      <Project>{f30bd15a-0eb5-4fa6-88d3-3b4604a41b4e}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\app\appseed\ace\ace.vcxproj">
       <Project>{21dcc811-4bce-4f16-b674-c0941f847127}</Project>
     </ProjectReference>
@@ -771,9 +771,9 @@
     <ProjectReference Include="..\..\..\app\appseed\sphere\sphere.vcxproj">
       <Project>{441f5cf8-7ce3-4f6f-a2e4-35351f0de150}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\gcom\gcom.vcxproj">
-      <Project>{f30bd15a-0eb5-4fa6-88d3-3b4604a41b4e}</Project>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scorpionilluminati_beatmapper.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

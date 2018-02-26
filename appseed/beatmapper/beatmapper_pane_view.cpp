@@ -2,7 +2,7 @@
 #include <math.h>
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
    pane_view::pane_view(::aura::application * papp) :
@@ -57,17 +57,17 @@ namespace hellomultiverse
       if(pobj->previous())
          return;
 
-      set_tab("Menu",::hellomultiverse::PaneViewMenu);
-      set_tab("gcom", ::hellomultiverse::PaneViewGcom);
-      set_tab("hellomultiverse", ::hellomultiverse::PaneViewHelloMultiverse);
-      set_tab("switcher",::hellomultiverse::PaneViewHelloMultiverseSwitcher);
+      set_tab("Menu",::beatmapper::PaneViewMenu);
+      set_tab("gcom", ::beatmapper::PaneViewGcom);
+      set_tab("beatmapper", ::beatmapper::PaneViewBeatMapper);
+      set_tab("switcher",::beatmapper::PaneViewBeatMapperSwitcher);
       set_tab("Font","font_sel");
 #if 1
       set_tab("Open", "file_manager");
 #endif
 
-      //set_cur_tab_by_id(::hellomultiverse::PaneViewGcom);
-      set_cur_tab_by_id(::hellomultiverse::PaneViewHelloMultiverse);
+      //set_cur_tab_by_id(::beatmapper::PaneViewGcom);
+      set_cur_tab_by_id(::beatmapper::PaneViewBeatMapper);
 
 
 
@@ -102,19 +102,19 @@ namespace hellomultiverse
 
       stra.explode("->:<-",strId);
 
-      if (get_pane_by_id(::hellomultiverse::PaneViewMenu) != NULL && get_pane_by_id(::hellomultiverse::PaneViewMenu)->m_pholder != NULL)
+      if (get_pane_by_id(::beatmapper::PaneViewMenu) != NULL && get_pane_by_id(::beatmapper::PaneViewMenu)->m_pholder != NULL)
       {
 
-         get_pane_by_id(::hellomultiverse::PaneViewMenu)->m_pholder->ShowWindow(SW_HIDE);
+         get_pane_by_id(::beatmapper::PaneViewMenu)->m_pholder->ShowWindow(SW_HIDE);
 
       }
 
-      if(get_view_id() == ::hellomultiverse::PaneViewGcom
-            || get_view_id() == ::hellomultiverse::PaneViewHelloMultiverse
-            || get_view_id() == ::hellomultiverse::PaneViewHelloMultiverseSwitcher
-            || stra.contains(::str::from((int)::hellomultiverse::PaneViewGcom))
-            || stra.contains(::str::from((int)::hellomultiverse::PaneViewHelloMultiverse))
-            || stra.contains(::str::from((int)::hellomultiverse::PaneViewHelloMultiverseSwitcher)))
+      if(get_view_id() == ::beatmapper::PaneViewGcom
+            || get_view_id() == ::beatmapper::PaneViewBeatMapper
+            || get_view_id() == ::beatmapper::PaneViewBeatMapperSwitcher
+            || stra.contains(::str::from((int)::beatmapper::PaneViewGcom))
+            || stra.contains(::str::from((int)::beatmapper::PaneViewBeatMapper))
+            || stra.contains(::str::from((int)::beatmapper::PaneViewBeatMapperSwitcher)))
       {
 
 
@@ -138,38 +138,38 @@ namespace hellomultiverse
 
 
 
-         if(get_view_id() == ::hellomultiverse::PaneViewGcom)
+         if(get_view_id() == ::beatmapper::PaneViewGcom)
          {
 
-            m_pviewLast = dynamic_cast < view_base * > (get_pane_by_id(::hellomultiverse::PaneViewGcom)->m_pholder->get_child_by_id("hellomultiverse_gcom"));
+            m_pviewLast = dynamic_cast < view_base * > (get_pane_by_id(::beatmapper::PaneViewGcom)->m_pholder->get_child_by_id("beatmapper_gcom"));
             m_pviewdataTopic = m_pviewdata;
-            m_strTopicTitle = get_pane_by_id(::hellomultiverse::PaneViewGcom)->m_straTitle.implode(" ");
+            m_strTopicTitle = get_pane_by_id(::beatmapper::PaneViewGcom)->m_straTitle.implode(" ");
 
          }
-         else if(get_view_id() == ::hellomultiverse::PaneViewHelloMultiverse)
+         else if(get_view_id() == ::beatmapper::PaneViewBeatMapper)
          {
 
-            m_pviewLast = dynamic_cast < view_base * > (get_pane_by_id(::hellomultiverse::PaneViewHelloMultiverse)->m_pholder->get_child_by_id("hellomultiverse_view"));
-            m_pviewLastBilbo = dynamic_cast < view * > (get_pane_by_id(::hellomultiverse::PaneViewHelloMultiverse)->m_pholder->get_child_by_id("hellomultiverse_view"));
+            m_pviewLast = dynamic_cast < view_base * > (get_pane_by_id(::beatmapper::PaneViewBeatMapper)->m_pholder->get_child_by_id("beatmapper_view"));
+            m_pviewLastBilbo = dynamic_cast < view * > (get_pane_by_id(::beatmapper::PaneViewBeatMapper)->m_pholder->get_child_by_id("beatmapper_view"));
             m_pviewLast->set_need_layout();
             m_pviewdataTopic = m_pviewdata;
-            m_strTopicTitle = get_pane_by_id(::hellomultiverse::PaneViewHelloMultiverse)->m_straTitle.implode(" ");
+            m_strTopicTitle = get_pane_by_id(::beatmapper::PaneViewBeatMapper)->m_straTitle.implode(" ");
 
          }
-         else if (get_view_id() == ::hellomultiverse::PaneViewHelloMultiverseSwitcher)
+         else if (get_view_id() == ::beatmapper::PaneViewBeatMapperSwitcher)
          {
 
-            m_pviewLast = dynamic_cast < view_base * > (get_pane_by_id(::hellomultiverse::PaneViewHelloMultiverseSwitcher)->m_pholder->get_child_by_id("hellomultiverse_view"));
-            m_pviewLastBilbo = dynamic_cast < view * > (get_pane_by_id(::hellomultiverse::PaneViewHelloMultiverseSwitcher)->m_pholder->get_child_by_id("hellomultiverse_view"));
+            m_pviewLast = dynamic_cast < view_base * > (get_pane_by_id(::beatmapper::PaneViewBeatMapperSwitcher)->m_pholder->get_child_by_id("beatmapper_view"));
+            m_pviewLastBilbo = dynamic_cast < view * > (get_pane_by_id(::beatmapper::PaneViewBeatMapperSwitcher)->m_pholder->get_child_by_id("beatmapper_view"));
             m_pviewLast->set_need_layout();
             m_pviewdataTopic = m_pviewdata;
-            m_strTopicTitle = get_pane_by_id(::hellomultiverse::PaneViewHelloMultiverseSwitcher)->m_straTitle.implode(" ");
+            m_strTopicTitle = get_pane_by_id(::beatmapper::PaneViewBeatMapperSwitcher)->m_straTitle.implode(" ");
 
          }
 
 
       }
-      else if (get_view_id() == ::hellomultiverse::PaneViewMenu)
+      else if (get_view_id() == ::beatmapper::PaneViewMenu)
       {
 
          //::user::tab_pane * ppane = get_pane(id_pane(get_view_id()));
@@ -297,17 +297,17 @@ namespace hellomultiverse
       }
 
       break;
-      case PaneViewHelloMultiverse:
+      case PaneViewBeatMapper:
       {
 
-         Application.m_ptemplateHelloMultiverseView->create_subdocument(pcreatordata);
+         Application.m_ptemplateBeatMapperView->create_subdocument(pcreatordata);
 
       }
       break;
-      case PaneViewHelloMultiverseSwitcher:
+      case PaneViewBeatMapperSwitcher:
       {
 
-         Application.m_ptemplateHelloMultiverseSwitcher->create_subdocument(pcreatordata);
+         Application.m_ptemplateBeatMapperSwitcher->create_subdocument(pcreatordata);
 
       }
       break;
@@ -518,7 +518,7 @@ namespace hellomultiverse
 
       ::file::path path;
 
-      path = System.dir().appdata() / "hellomultiverse_menu.html";
+      path = System.dir().appdata() / "beatmapper_menu.html";
 
       Application.file().put_contents(path, str);
 
@@ -584,7 +584,7 @@ namespace hellomultiverse
    }
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 

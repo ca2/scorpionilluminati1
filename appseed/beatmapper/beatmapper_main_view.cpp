@@ -1,7 +1,7 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
@@ -97,7 +97,7 @@ namespace hellomultiverse
 
       //m_pview = create_view < lite_view >();
 
-      m_pview = create_view < view >(NULL,::null_rect(),get_pane_holder(iPane), "hellomultiverse_view");
+      m_pview = create_view < view >(NULL,::null_rect(),get_pane_holder(iPane), "beatmapper_view");
 
       if(m_pview == NULL)
       {
@@ -146,7 +146,7 @@ namespace hellomultiverse
       if(pevent->m_eevent == ::user::event_button_clicked)
       {
 
-         if(pevent->m_puie->m_id == "hellomultiverse_toggle")
+         if(pevent->m_puie->m_id == "beatmapper_toggle")
          {
 
             m_pview->m_prender->m_bLite = !m_pview->m_prender->m_bLite;
@@ -164,7 +164,7 @@ namespace hellomultiverse
 
    }
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 

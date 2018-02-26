@@ -1,11 +1,11 @@
-#pragma once
+﻿#pragma once
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE pane_view :
+   class CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER pane_view :
       virtual public ::userex::pane_tab_view,
       virtual public ::user::form_callback
    {
@@ -51,7 +51,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 

@@ -1,7 +1,7 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
@@ -35,7 +35,7 @@ namespace hellomultiverse
    }
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 

@@ -1,4 +1,4 @@
-// !$*UTF8*$!
+﻿// !$*UTF8*$!
 {
 	archiveVersion = 1;
 	classes = {
@@ -12,7 +12,7 @@
 		07330B191B72BE53009E318E /* libcore.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076A248D1B6E772400BF6C7D /* libcore.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		073D67691B6E7B1000B8AC34 /* libdraw2d_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076A24961B6E772400BF6C7D /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		073D69651B6E7B2A00B8AC34 /* libwndfrm_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076A249F1B6E772400BF6C7D /* libwndfrm_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		073D69661B6E7B2A00B8AC34 /* libapp_core_hellomultiverse.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076A24B71B6E773B00BF6C7D /* libapp_core_hellomultiverse.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		073D69661B6E7B2A00B8AC34 /* libscorpionilluminati_beatmapper.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076A24B71B6E773B00BF6C7D /* libscorpionilluminati_beatmapper.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		073D6D381B6E7B5E00B8AC34 /* libaxis.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076A24481B6E772400BF6C7D /* libaxis.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		076FB4DB1C9F916900C73C4E /* libgcom.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076FB4D41C9F90E100C73C4E /* libgcom.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		07AF89311B72560F00150CC2 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 076A243F1B6E772400BF6C7D /* libaura.dylib */; };
@@ -38,7 +38,7 @@
 			containerPortal = 070B8EE21B6E53F900D26137 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 070B8EE91B6E53F900D26137;
-			remoteInfo = "Hello Multiverse!!";
+			remoteInfo = "Beat Mapper!!";
 		};
 		076A243E1B6E772400BF6C7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -168,24 +168,24 @@
 		};
 		076A24B61B6E773B00BF6C7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 076A24B01B6E773B00BF6C7D /* app_core_hellomultiverse.xcodeproj */;
+			containerPortal = 076A24B01B6E773B00BF6C7D /* scorpionilluminati_beatmapper.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
-			remoteInfo = app_core_hellomultiverse;
+			remoteInfo = scorpionilluminati_beatmapper;
 		};
 		076A24B81B6E773B00BF6C7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 076A24B01B6E773B00BF6C7D /* app_core_hellomultiverse.xcodeproj */;
+			containerPortal = 076A24B01B6E773B00BF6C7D /* scorpionilluminati_beatmapper.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
-			remoteInfo = ios_app_core_hellomultiverse;
+			remoteInfo = ios_scorpionilluminati_beatmapper;
 		};
 		076A24BA1B6E773B00BF6C7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 076A24B01B6E773B00BF6C7D /* app_core_hellomultiverse.xcodeproj */;
+			containerPortal = 076A24B01B6E773B00BF6C7D /* scorpionilluminati_beatmapper.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
-			remoteInfo = app_core_hellomultiverse_iosTests;
+			remoteInfo = scorpionilluminati_beatmapper_iosTests;
 		};
 		076A24BC1B6E776300BF6C7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -259,10 +259,10 @@
 		};
 		07AF892E1B7233E300150CC2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 076A24B01B6E773B00BF6C7D /* app_core_hellomultiverse.xcodeproj */;
+			containerPortal = 076A24B01B6E773B00BF6C7D /* scorpionilluminati_beatmapper.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
-			remoteInfo = app_core_hellomultiverse;
+			remoteInfo = scorpionilluminati_beatmapper;
 		};
 		9A22037C1FFDC81000EE03EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -484,15 +484,15 @@
 				07330AF51B72BE1E009E318E /* libbase.dylib in CopyFiles */,
 				073D67691B6E7B1000B8AC34 /* libdraw2d_quartz2d.dylib in CopyFiles */,
 				073D69651B6E7B2A00B8AC34 /* libwndfrm_core.dylib in CopyFiles */,
-				073D69661B6E7B2A00B8AC34 /* libapp_core_hellomultiverse.dylib in CopyFiles */,
+				073D69661B6E7B2A00B8AC34 /* libscorpionilluminati_beatmapper.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		070B8EEA1B6E53F900D26137 /* Hello Multiverse!!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello Multiverse!!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hello Multiverse!!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		070B8EEA1B6E53F900D26137 /* Beat Mapper!!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beat Mapper!!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		070B8EFD1B6E53FA00D26137 /* Beat Mapper!!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Beat Mapper!!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8F021B6E53FA00D26137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_Multiverse__Tests.m; sourceTree = "<group>"; };
 		076A24081B6E772400BF6C7D /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../../app/appseed/aura/aura.xcodeproj; sourceTree = "<group>"; };
@@ -501,7 +501,7 @@
 		076A24291B6E772400BF6C7D /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../../app/appseed/core/core.xcodeproj; sourceTree = "<group>"; };
 		076A242C1B6E772400BF6C7D /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = ../../../app/appseed/draw2d_quartz2d/draw2d_quartz2d.xcodeproj; sourceTree = "<group>"; };
 		076A242F1B6E772400BF6C7D /* wndfrm_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = wndfrm_core.xcodeproj; path = ../wndfrm_core/wndfrm_core.xcodeproj; sourceTree = "<group>"; };
-		076A24B01B6E773B00BF6C7D /* app_core_hellomultiverse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = app_core_hellomultiverse.xcodeproj; sourceTree = "<group>"; };
+		076A24B01B6E773B00BF6C7D /* scorpionilluminati_beatmapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = scorpionilluminati_beatmapper.xcodeproj; sourceTree = "<group>"; };
 		076FB4CD1C9F90E000C73C4E /* gcom.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gcom.xcodeproj; path = ../gcom/gcom.xcodeproj; sourceTree = "<group>"; };
 		07C6AA171CA4F16B00B4E555 /* app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = app.h; path = macos/app.h; sourceTree = SOURCE_ROOT; };
 		07C6AA181CA4F16B00B4E555 /* app.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = app.mm; path = macos/app.mm; sourceTree = SOURCE_ROOT; };
@@ -543,7 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				9ACB5ED81F802A6A00B211A7 /* ace.xcodeproj */,
-				076A24B01B6E773B00BF6C7D /* app_core_hellomultiverse.xcodeproj */,
+				076A24B01B6E773B00BF6C7D /* scorpionilluminati_beatmapper.xcodeproj */,
 				9A97F02B1D80944E000B4EC2 /* atomiconv.xcodeproj */,
 				076A24081B6E772400BF6C7D /* aura.xcodeproj */,
 				9A97F0441D809453000B4EC2 /* aurapcre.xcodeproj */,
@@ -559,7 +559,7 @@
 				9ACB5F4A1F802B6300B211A7 /* sphere.xcodeproj */,
 				076A242F1B6E772400BF6C7D /* wndfrm_core.xcodeproj */,
 				070B8EEC1B6E53F900D26137 /* macos */,
-				070B8F001B6E53FA00D26137 /* Hello Multiverse!!Tests */,
+				070B8F001B6E53FA00D26137 /* Beat Mapper!!Tests */,
 				070B8EEB1B6E53F900D26137 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -567,8 +567,8 @@
 		070B8EEB1B6E53F900D26137 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				070B8EEA1B6E53F900D26137 /* Hello Multiverse!!.app */,
-				070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */,
+				070B8EEA1B6E53F900D26137 /* Beat Mapper!!.app */,
+				070B8EFD1B6E53FA00D26137 /* Beat Mapper!!Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -583,16 +583,16 @@
 				07C6AA261CA4F3A700B4E555 /* main.cpp */,
 			);
 			name = macos;
-			path = "Hello Multiverse!!";
+			path = "Beat Mapper!!";
 			sourceTree = "<group>";
 		};
-		070B8F001B6E53FA00D26137 /* Hello Multiverse!!Tests */ = {
+		070B8F001B6E53FA00D26137 /* Beat Mapper!!Tests */ = {
 			isa = PBXGroup;
 			children = (
 				070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */,
 				070B8F011B6E53FA00D26137 /* Supporting Files */,
 			);
-			path = "Hello Multiverse!!Tests";
+			path = "Beat Mapper!!Tests";
 			sourceTree = "<group>";
 		};
 		070B8F011B6E53FA00D26137 /* Supporting Files */ = {
@@ -666,9 +666,9 @@
 		076A24B11B6E773B00BF6C7D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				076A24B71B6E773B00BF6C7D /* libapp_core_hellomultiverse.dylib */,
-				076A24B91B6E773B00BF6C7D /* libapp_core_hellomultiverse.a */,
-				076A24BB1B6E773B00BF6C7D /* app_core_hellomultiverse_iosTests.xctest */,
+				076A24B71B6E773B00BF6C7D /* libscorpionilluminati_beatmapper.dylib */,
+				076A24B91B6E773B00BF6C7D /* libscorpionilluminati_beatmapper.a */,
+				076A24BB1B6E773B00BF6C7D /* scorpionilluminati_beatmapper_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -761,9 +761,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		070B8EE91B6E53F900D26137 /* Hello Multiverse!! */ = {
+		070B8EE91B6E53F900D26137 /* Beat Mapper!! */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Hello Multiverse!!" */;
+			buildConfigurationList = 070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Beat Mapper!!" */;
 			buildPhases = (
 				070B8EE61B6E53F900D26137 /* Sources */,
 				070B8EE71B6E53F900D26137 /* Frameworks */,
@@ -791,14 +791,14 @@
 				076A24BD1B6E776300BF6C7D /* PBXTargetDependency */,
 				076A24BF1B6E776300BF6C7D /* PBXTargetDependency */,
 			);
-			name = "Hello Multiverse!!";
-			productName = "Hello Multiverse!!";
-			productReference = 070B8EEA1B6E53F900D26137 /* Hello Multiverse!!.app */;
+			name = "Beat Mapper!!";
+			productName = "Beat Mapper!!";
+			productReference = 070B8EEA1B6E53F900D26137 /* Beat Mapper!!.app */;
 			productType = "com.apple.product-type.application";
 		};
-		070B8EFC1B6E53FA00D26137 /* Hello Multiverse!!Tests */ = {
+		070B8EFC1B6E53FA00D26137 /* Beat Mapper!!Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Hello Multiverse!!Tests" */;
+			buildConfigurationList = 070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Beat Mapper!!Tests" */;
 			buildPhases = (
 				070B8EF91B6E53FA00D26137 /* Sources */,
 				070B8EFA1B6E53FA00D26137 /* Frameworks */,
@@ -809,9 +809,9 @@
 			dependencies = (
 				070B8EFF1B6E53FA00D26137 /* PBXTargetDependency */,
 			);
-			name = "Hello Multiverse!!Tests";
-			productName = "Hello Multiverse!!Tests";
-			productReference = 070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */;
+			name = "Beat Mapper!!Tests";
+			productName = "Beat Mapper!!Tests";
+			productReference = 070B8EFD1B6E53FA00D26137 /* Beat Mapper!!Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -833,7 +833,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "Hello Multiverse!!" */;
+			buildConfigurationList = 070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "Beat Mapper!!" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -851,7 +851,7 @@
 				},
 				{
 					ProductGroup = 076A24B11B6E773B00BF6C7D /* Products */;
-					ProjectRef = 076A24B01B6E773B00BF6C7D /* app_core_hellomultiverse.xcodeproj */;
+					ProjectRef = 076A24B01B6E773B00BF6C7D /* scorpionilluminati_beatmapper.xcodeproj */;
 				},
 				{
 					ProductGroup = 9A97F02C1D80944E000B4EC2 /* Products */;
@@ -912,8 +912,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				070B8EE91B6E53F900D26137 /* Hello Multiverse!! */,
-				070B8EFC1B6E53FA00D26137 /* Hello Multiverse!!Tests */,
+				070B8EE91B6E53F900D26137 /* Beat Mapper!! */,
+				070B8EFC1B6E53FA00D26137 /* Beat Mapper!!Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -1046,24 +1046,24 @@
 			remoteRef = 076A24A21B6E772400BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A24B71B6E773B00BF6C7D /* libapp_core_hellomultiverse.dylib */ = {
+		076A24B71B6E773B00BF6C7D /* libscorpionilluminati_beatmapper.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libapp_core_hellomultiverse.dylib;
+			path = libscorpionilluminati_beatmapper.dylib;
 			remoteRef = 076A24B61B6E773B00BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A24B91B6E773B00BF6C7D /* libapp_core_hellomultiverse.a */ = {
+		076A24B91B6E773B00BF6C7D /* libscorpionilluminati_beatmapper.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libapp_core_hellomultiverse.a;
+			path = libscorpionilluminati_beatmapper.a;
 			remoteRef = 076A24B81B6E773B00BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		076A24BB1B6E773B00BF6C7D /* app_core_hellomultiverse_iosTests.xctest */ = {
+		076A24BB1B6E773B00BF6C7D /* scorpionilluminati_beatmapper_iosTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = app_core_hellomultiverse_iosTests.xctest;
+			path = scorpionilluminati_beatmapper_iosTests.xctest;
 			remoteRef = 076A24BA1B6E773B00BF6C7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1264,7 +1264,7 @@
 /* Begin PBXTargetDependency section */
 		070B8EFF1B6E53FA00D26137 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 070B8EE91B6E53F900D26137 /* Hello Multiverse!! */;
+			target = 070B8EE91B6E53F900D26137 /* Beat Mapper!! */;
 			targetProxy = 070B8EFE1B6E53FA00D26137 /* PBXContainerItemProxy */;
 		};
 		076A24BD1B6E776300BF6C7D /* PBXTargetDependency */ = {
@@ -1304,7 +1304,7 @@
 		};
 		07AF892F1B7233E300150CC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = app_core_hellomultiverse;
+			name = scorpionilluminati_beatmapper;
 			targetProxy = 07AF892E1B7233E300150CC2 /* PBXContainerItemProxy */;
 		};
 		9A2203931FFDCCEE00EE03EE /* PBXTargetDependency */ = {
@@ -1471,8 +1471,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = "cc.ca2.app-core.hellomultiverse";
-				PRODUCT_NAME = "Hello Multiverse!!";
+				PRODUCT_BUNDLE_IDENTIFIER = "cc.ca2.app-core.beatmapper";
+				PRODUCT_NAME = "Beat Mapper!!";
 			};
 			name = Debug;
 		};
@@ -1484,8 +1484,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = "cc.ca2.app-core.hellomultiverse";
-				PRODUCT_NAME = "Hello Multiverse!!";
+				PRODUCT_BUNDLE_IDENTIFIER = "cc.ca2.app-core.beatmapper";
+				PRODUCT_NAME = "Beat Mapper!!";
 			};
 			name = Release;
 		};
@@ -1502,11 +1502,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Hello Multiverse!!Tests/Info.plist";
+				INFOPLIST_FILE = "Beat Mapper!!Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hello Multiverse!!.app/Contents/MacOS/Hello Multiverse!!";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beat Mapper!!.app/Contents/MacOS/Beat Mapper!!";
 			};
 			name = Debug;
 		};
@@ -1519,18 +1519,18 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Hello Multiverse!!Tests/Info.plist";
+				INFOPLIST_FILE = "Beat Mapper!!Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hello Multiverse!!.app/Contents/MacOS/Hello Multiverse!!";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beat Mapper!!.app/Contents/MacOS/Beat Mapper!!";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "Hello Multiverse!!" */ = {
+		070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "Beat Mapper!!" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				070B8F051B6E53FA00D26137 /* Debug */,
@@ -1539,7 +1539,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Hello Multiverse!!" */ = {
+		070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Beat Mapper!!" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				070B8F081B6E53FA00D26137 /* Debug */,
@@ -1548,7 +1548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Hello Multiverse!!Tests" */ = {
+		070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "Beat Mapper!!Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				070B8F0B1B6E53FA00D26137 /* Debug */,

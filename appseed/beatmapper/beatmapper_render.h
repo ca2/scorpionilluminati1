@@ -1,6 +1,6 @@
-//
-//  hellomultiverse_render.h
-//  app_core_hellomultiverse
+﻿//
+//  beatmapper_render.h
+//  scorpionilluminati_beatmapper
 //
 //  Created by Camilo Sasuke Tsumanuma on 8/6/15 23:27;24.
 //  Copyright (c) 2015 Camilo Sasuke Tsumanuma. All rights reserved.
@@ -10,11 +10,11 @@
 #pragma once
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE render :
+   class CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER render :
       virtual public ::thread
    {
    public:
@@ -76,7 +76,7 @@ namespace hellomultiverse
       double                           m_dMinRadius;
       double                           m_dMaxRadius;
 
-      string                           m_strHelloMultiverse;
+      string                           m_strBeatMapper;
 
       rect                             m_rectClient;
 
@@ -117,7 +117,7 @@ namespace hellomultiverse
       virtual ~render();
 
 
-      string get_hellomultiverse() { synch_lock slText(m_pmutexText);  string str(m_strHelloMultiverse.c_str()); return str; }
+      string get_beatmapper() { synch_lock slText(m_pmutexText);  string str(m_strBeatMapper.c_str()); return str; }
 
 
       virtual void run() override;
@@ -126,13 +126,13 @@ namespace hellomultiverse
 
 
       virtual void full_render();
-      virtual void hellomultiverse_render();
-      virtual void hellomultiverse_draw();
-      virtual void hellomultiverse_render(::draw2d::graphics * pgraphics);
-      //virtual void hellomultiverse_render(::draw2d::graphics * pgraphics);
+      virtual void beatmapper_render();
+      virtual void beatmapper_draw();
+      virtual void beatmapper_render(::draw2d::graphics * pgraphics);
+      //virtual void beatmapper_render(::draw2d::graphics * pgraphics);
 
-      virtual void hellomultiverse_render_full_view(::draw2d::graphics * pgraphics);
-      virtual void hellomultiverse_render_lite_view(::draw2d::graphics * pgraphics);
+      virtual void beatmapper_render_full_view(::draw2d::graphics * pgraphics);
+      virtual void beatmapper_render_lite_view(::draw2d::graphics * pgraphics);
 
 
       virtual void _001OnHelloDraw(::draw2d::graphics * pgraphics);
@@ -142,12 +142,12 @@ namespace hellomultiverse
       ::visual::dib_sp & dib23(string strDib);
 
       virtual bool in_anime();
-      virtual void hellomultiverse_fast_render(const string & strHelloMultiverse);
+      virtual void beatmapper_fast_render(const string & strBeatMapper);
 
 
    };
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 #include "sphere/sphere/sphere.h"
@@ -7,10 +7,10 @@
 #include "core/user/html/html/html.h"
 #include "app-core/appseed/gcom/gcom/gcom.h"
 
-#ifdef _APP_CORE_HELLOMULTIVERSE_LIBRARY
-   #define CLASS_DECL_APP_CORE_HELLOMULTIVERSE  CLASS_DECL_EXPORT
+#ifdef _SCORPIONILLUMINATI_BEATMAPPER_LIBRARY
+   #define CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER  CLASS_DECL_EXPORT
 #else
-   #define CLASS_DECL_APP_CORE_HELLOMULTIVERSE  CLASS_DECL_IMPORT
+   #define CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER  CLASS_DECL_IMPORT
 #endif
 
 
@@ -22,7 +22,7 @@ namespace user
 } // namespace user
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
    class application;
@@ -34,23 +34,23 @@ namespace hellomultiverse
 
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::hellomultiverse::application > ())
+#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::beatmapper::application > ())
 
 
-#include "hellomultiverse_render.h"
+#include "beatmapper_render.h"
 
-#include "hellomultiverse_document.h"
-#include "hellomultiverse_view_base.h"
-#include "hellomultiverse_gcom.h"
-#include "hellomultiverse_view.h"
-//#include "hellomultiverse_lite_view.h"
-//#include "hellomultiverse_full_view.h"
-#include "hellomultiverse_main_view.h"
-#include "hellomultiverse_switcher_view.h"
-#include "hellomultiverse_frame.h"
-#include "hellomultiverse_main_frame.h"
-#include "hellomultiverse_pane_view_update_hint.h"
-#include "hellomultiverse_pane_view.h"
+#include "beatmapper_document.h"
+#include "beatmapper_view_base.h"
+#include "beatmapper_gcom.h"
+#include "beatmapper_view.h"
+//#include "beatmapper_lite_view.h"
+//#include "beatmapper_full_view.h"
+#include "beatmapper_main_view.h"
+#include "beatmapper_switcher_view.h"
+#include "beatmapper_frame.h"
+#include "beatmapper_main_frame.h"
+#include "beatmapper_pane_view_update_hint.h"
+#include "beatmapper_pane_view.h"
 
-#include "hellomultiverse_application.h"
+#include "beatmapper_application.h"
 

@@ -1,6 +1,6 @@
 ﻿//
-//  hellomultiverse_render.cpp
-//  app_core_hellomultiverse
+//  beatmapper_render.cpp
+//  scorpionilluminati_beatmapper
 //
 //  Created by Camilo Sasuke Tsumanuma on 8/6/15 23:27;24.
 //  Copyright (c) 2015 Camilo Sasuke Tsumanuma. All rights reserved.
@@ -11,7 +11,7 @@
 #include <math.h>
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
    render::bilbo::bilbo()
@@ -152,8 +152,8 @@ namespace hellomultiverse
 
       }
 
-      hellomultiverse_draw();
-      hellomultiverse_render();
+      beatmapper_draw();
+      beatmapper_render();
 
       //if(m_bFirstDone)
       {
@@ -320,7 +320,7 @@ namespace hellomultiverse
    }
 
 
-   void render::hellomultiverse_render()
+   void render::beatmapper_render()
    {
 
       {
@@ -334,14 +334,14 @@ namespace hellomultiverse
 
          pdib->Fill(0, 0, 0, 0);
 
-         hellomultiverse_render(pdib->get_graphics());
+         beatmapper_render(pdib->get_graphics());
 
 
       }
 
    }
 
-   void render::hellomultiverse_render(::draw2d::graphics * pgraphics)
+   void render::beatmapper_render(::draw2d::graphics * pgraphics)
    {
 
 
@@ -349,20 +349,20 @@ namespace hellomultiverse
       //   if(m_bLite)
       {
 
-         hellomultiverse_render_lite_view(pgraphics);
+         beatmapper_render_lite_view(pgraphics);
 
       }
       //   else
       //   {
       //
-      //      hellomultiverse_render_full_view(pdib->get_graphics());
+      //      beatmapper_render_full_view(pdib->get_graphics());
       //
       //   }
 
    }
 
 
-   void render::hellomultiverse_draw()
+   void render::beatmapper_draw()
    {
 
       if (m_bVoidTransfer)
@@ -404,7 +404,7 @@ namespace hellomultiverse
 
    }
 
-   void render::hellomultiverse_render_lite_view(::draw2d::graphics * pgraphics)
+   void render::beatmapper_render_lite_view(::draw2d::graphics * pgraphics)
    {
 
       if (m_dibWork->area() <= 0)
@@ -460,19 +460,19 @@ namespace hellomultiverse
 
       ::size size;
 
-      string strHelloMultiverse;
+      string strBeatMapper;
 
       {
 
          synch_lock slText(m_pmutexText);
 
-         strHelloMultiverse = get_hellomultiverse().c_str(); // rationale : string allocation fork *for multithreading*
+         strBeatMapper = get_beatmapper().c_str(); // rationale : string allocation fork *for multithreading*
 
       }
 
       pgraphics->set_font(m_font);
 
-      size = pgraphics->GetTextExtent(strHelloMultiverse);
+      size = pgraphics->GetTextExtent(strBeatMapper);
 
       m_cxTarget = int (size.cx * 1.2);
       m_cyTarget = int (size.cy * 1.2);
@@ -514,7 +514,7 @@ namespace hellomultiverse
 
                   m_dib->get_graphics()->SelectObject(brushText);
 
-                  m_dib->get_graphics()->text_out((m_cxCache1 - size.cx) / 2, (m_cyCache1 - size.cy) / 2, strHelloMultiverse);
+                  m_dib->get_graphics()->text_out((m_cxCache1 - size.cx) / 2, (m_cyCache1 - size.cy) / 2, strBeatMapper);
 
                   m_dib->map();
 
@@ -540,7 +540,7 @@ namespace hellomultiverse
 
          synch_lock slText(m_pmutexText);
 
-         if (strHelloMultiverse != get_hellomultiverse() || m_cxCache1 != m_cxTarget || m_cyCache1 != m_cyTarget || m_dibTemplate->area() <= 0)
+         if (strBeatMapper != get_beatmapper() || m_cxCache1 != m_cxTarget || m_cyCache1 != m_cyTarget || m_dibTemplate->area() <= 0)
             return;
 
       }
@@ -631,7 +631,7 @@ namespace hellomultiverse
       //if(!m_bAlternate)
       {
 
-         pgraphics->text_out((m_cx - size.cx) / 2, (m_cy - size.cy) / 2, strHelloMultiverse);
+         pgraphics->text_out((m_cx - size.cx) / 2, (m_cy - size.cy) / 2, strBeatMapper);
 
       }
       //      pgraphics->FillSolidRect(200,00,100,100,ARGB(128,128,128,255));
@@ -643,7 +643,7 @@ namespace hellomultiverse
 
          synch_lock slText(m_pmutexText);
 
-         if (strHelloMultiverse == get_hellomultiverse() && m_cxCache1 == m_cxTarget && m_cyCache1 == m_cyTarget)
+         if (strBeatMapper == get_beatmapper() && m_cxCache1 == m_cxTarget && m_cyCache1 == m_cyTarget)
          {
 
             m_bFirstDone = true;
@@ -655,7 +655,7 @@ namespace hellomultiverse
    }
 
 
-   void render::hellomultiverse_render_full_view(::draw2d::graphics * pgraphics)
+   void render::beatmapper_render_full_view(::draw2d::graphics * pgraphics)
    {
 
       if (m_dibWork->area() <= 0)
@@ -741,9 +741,9 @@ namespace hellomultiverse
 
       pgraphics->set_font(m_font);
 
-      string strHelloMultiverse = get_hellomultiverse();
+      string strBeatMapper = get_beatmapper();
 
-      ::size size = pgraphics->GetTextExtent(strHelloMultiverse);
+      ::size size = pgraphics->GetTextExtent(strBeatMapper);
 
       m_cxTarget = int(size.cx * 1.2);
       m_cyTarget = int(size.cy * 1.2);
@@ -782,7 +782,7 @@ namespace hellomultiverse
 
             m_dib->get_graphics()->set_font(m_font);
 
-            m_dib->get_graphics()->text_out((m_cx - size.cx) / 2, (m_cy - size.cy) / 2, strHelloMultiverse);
+            m_dib->get_graphics()->text_out((m_cx - size.cx) / 2, (m_cy - size.cy) / 2, strBeatMapper);
 
             if (m_dMinRadius > 3.0)
             {
@@ -849,7 +849,7 @@ namespace hellomultiverse
 
       pgraphics->SelectObject(brushText);
 
-      pgraphics->text_out((m_cx - size.cx) / 2, (m_cy - size.cy) / 2, strHelloMultiverse);
+      pgraphics->text_out((m_cx - size.cx) / 2, (m_cy - size.cy) / 2, strBeatMapper);
 
       byte a, R, g, b;
 
@@ -983,7 +983,7 @@ namespace hellomultiverse
 
 #endif
 
-      if (strHelloMultiverse == get_hellomultiverse() && m_cx == m_rectClient.width() && m_cy == m_rectClient.height())
+      if (strBeatMapper == get_beatmapper() && m_cx == m_rectClient.width() && m_cy == m_rectClient.height())
       {
 
          m_bFirstDone = true;
@@ -1130,13 +1130,13 @@ namespace hellomultiverse
 
          {
 
-            string strHelloMultiverse;
+            string strBeatMapper;
 
             {
 
                synch_lock slText(&m_pview->m_mutexText);
 
-               strHelloMultiverse = m_pview->get_processed_hellomultiverse().c_str();
+               strBeatMapper = m_pview->get_processed_beatmapper().c_str();
 
             }
 
@@ -1153,7 +1153,7 @@ namespace hellomultiverse
 
                pgraphics->set_text_rendering(::draw2d::text_rendering_anti_alias);
 
-               class size size = pgraphics->GetTextExtent(strHelloMultiverse);
+               class size size = pgraphics->GetTextExtent(strBeatMapper);
 
                double ratey = fHeight * 0.84 / size.cy;
 
@@ -1183,9 +1183,9 @@ namespace hellomultiverse
 
             pgraphics->set_text_rendering(::draw2d::text_rendering_anti_alias);
 
-            ::size size = pgraphics->GetTextExtent(strHelloMultiverse);
+            ::size size = pgraphics->GetTextExtent(strBeatMapper);
 
-            pgraphics->text_out((m_cx - size.cx) / 2, (m_cy - size.cy) / 2, strHelloMultiverse);
+            pgraphics->text_out((m_cx - size.cx) / 2, (m_cy - size.cy) / 2, strBeatMapper);
 
             return;
 
@@ -1211,7 +1211,7 @@ namespace hellomultiverse
 
                synch_lock slText(&m_pview->m_mutexText);
 
-               hellomultiverse_fast_render(m_pview->get_processed_hellomultiverse());
+               beatmapper_fast_render(m_pview->get_processed_beatmapper());
 
             }
 
@@ -1383,7 +1383,7 @@ namespace hellomultiverse
       return false;
    }
 
-   void render::hellomultiverse_fast_render(const string & strHelloMultiverse)
+   void render::beatmapper_fast_render(const string & strBeatMapper)
    {
 
       if (m_cx <= 0 || m_cy <= 0)
@@ -1416,7 +1416,7 @@ namespace hellomultiverse
 
       pgraphics->set_text_rendering(::draw2d::text_rendering_anti_alias);
 
-      class size size = pgraphics->GetTextExtent(strHelloMultiverse);
+      class size size = pgraphics->GetTextExtent(strBeatMapper);
 
       double ratey = fHeight * 0.84 / size.cy;
 
@@ -1430,13 +1430,13 @@ namespace hellomultiverse
 
       pgraphics->set_font(m_font);
 
-      size = pgraphics->GetTextExtent(strHelloMultiverse);
+      size = pgraphics->GetTextExtent(strBeatMapper);
 
       ::draw2d::path_sp path(allocer());
 
       path->m_bFill = false;
 
-      path->add_string((m_cx - size.cx) / 2, (m_cy - size.cy) / 2, strHelloMultiverse, m_font);
+      path->add_string((m_cx - size.cx) / 2, (m_cy - size.cy) / 2, strBeatMapper, m_font);
 
       ::draw2d::pen_sp pen(allocer());
 
@@ -1459,7 +1459,7 @@ namespace hellomultiverse
    }
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 

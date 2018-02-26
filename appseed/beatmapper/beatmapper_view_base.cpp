@@ -1,8 +1,8 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include <math.h>
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
@@ -398,7 +398,7 @@ namespace hellomultiverse
 
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 

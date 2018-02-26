@@ -1,8 +1,8 @@
-; app_hellomultiverse.def
+﻿; app_beatmapper.def
 
-LIBRARY  "app_core_hellomultiverse"
+LIBRARY  "scorpionilluminati_beatmapper"
 ; For Win32 DLLs, only EXPORTs really required.
 
 EXPORTS
-app_core_hellomultiverse_get_new_library
+scorpionilluminati_beatmapper_get_new_library
 

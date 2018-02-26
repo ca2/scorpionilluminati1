@@ -1,11 +1,11 @@
-#pragma once
+﻿#pragma once
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE gcom :
+   class CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER gcom :
       virtual public view_base,
       virtual public ::backview::user::impact
    {
@@ -51,7 +51,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 

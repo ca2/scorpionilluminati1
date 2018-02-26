@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 #ifndef CUBE
@@ -16,13 +16,13 @@ WINBOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
    if (dwReason == DLL_PROCESS_ATTACH)
    {
       
-      ::output_debug_string("app_core_hellomultiverse.dll :: initializing!\n");
+      ::output_debug_string("scorpionilluminati_beatmapper.dll :: initializing!\n");
 
    }
    else if (dwReason == DLL_PROCESS_DETACH)
    {
 
-      ::output_debug_string("app_core_hellomultiverse.dll :: terminating!\n");
+      ::output_debug_string("scorpionilluminati_beatmapper.dll :: terminating!\n");
 
    }
 

@@ -1,6 +1,6 @@
-//
+﻿//
 //  Hello_Multiverse__Tests.m
-//  Hello Multiverse!!Tests
+//  Beat Mapper!!Tests
 //
 //  Created by Camilo Sasuke Tsumanuma on 8/2/15.
 //  Copyright (c) 2015 ca2 Desenvolvimento de Software Ltdal. All rights reserved.

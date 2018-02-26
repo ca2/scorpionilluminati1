@@ -1,11 +1,11 @@
-#pragma once
+﻿#pragma once
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE switcher_view:
+   class CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER switcher_view:
       virtual public ::user::split_view
    {
    public:
@@ -34,7 +34,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 

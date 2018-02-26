@@ -1,7 +1,7 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
@@ -9,22 +9,22 @@ namespace hellomultiverse
       m_mutexAiFont(this)
    {
 
-      m_ptemplateHelloMultiverseMain = NULL;
-      m_ptemplateHelloMultiverseView = NULL;
-      m_ptemplateHelloMultiverseSwitcher = NULL;
+      m_ptemplateBeatMapperMain = NULL;
+      m_ptemplateBeatMapperView = NULL;
+      m_ptemplateBeatMapperSwitcher = NULL;
 
-      m_strAppId = "app-core/hellomultiverse";
-      m_strAppName = "app-core/hellomultiverse";
+      m_strAppId = "scorpionilluminati/beatmapper";
+      m_strAppName = "scorpionilluminati/beatmapper";
       m_strBaseSupportId = "ca2_flag";
       m_bLicense = false;
 
       m_etype = type_normal;
 
-      m_strHelloMultiverseDefault = "Hello Multiverse!!";
-      m_strAlternateHelloMultiverseDefault = "Hello!!";
+      m_strBeatMapperDefault = "Beat Mapper!!";
+      m_strAlternateBeatMapperDefault = "Hello!!";
 
-      m_strHelloMultiverse = m_strHelloMultiverseDefault;
-      m_strAlternateHelloMultiverse = m_strAlternateHelloMultiverseDefault;
+      m_strBeatMapper = m_strBeatMapperDefault;
+      m_strAlternateBeatMapper = m_strAlternateBeatMapperDefault;
 
       m_iErrorAiFont = -1;
 
@@ -53,15 +53,15 @@ namespace hellomultiverse
 
       pcoression->use_font_sel();
 
-      System.factory().creatable_small < ::hellomultiverse::document >();
-      System.factory().creatable_small < ::hellomultiverse::frame >();
-      System.factory().creatable_small < ::hellomultiverse::main_frame >();
+      System.factory().creatable_small < ::beatmapper::document >();
+      System.factory().creatable_small < ::beatmapper::frame >();
+      System.factory().creatable_small < ::beatmapper::main_frame >();
       System.factory().creatable_small < ::user::button_view >();
-      System.factory().creatable_small < ::hellomultiverse::view >();
-      System.factory().creatable_small < ::hellomultiverse::main_view >();
-      System.factory().creatable_small < ::hellomultiverse::switcher_view >();
-      System.factory().creatable_small < ::hellomultiverse::pane_view >();
-      System.factory().creatable_small < ::hellomultiverse::gcom >();
+      System.factory().creatable_small < ::beatmapper::view >();
+      System.factory().creatable_small < ::beatmapper::main_view >();
+      System.factory().creatable_small < ::beatmapper::switcher_view >();
+      System.factory().creatable_small < ::beatmapper::pane_view >();
+      System.factory().creatable_small < ::beatmapper::gcom >();
 
       if (!::sphere::application::init_instance())
       {
@@ -70,12 +70,12 @@ namespace hellomultiverse
 
       }
 
-      string str = handler()->m_varTopicQuery["hellomultiverse"];
+      string str = handler()->m_varTopicQuery["beatmapper"];
 
       if (str.has_char())
       {
 
-         m_strHelloMultiverse = str;
+         m_strBeatMapper = str;
 
       }
 
@@ -89,7 +89,7 @@ namespace hellomultiverse
                            System.type_info < document >(),
                            System.type_info < main_frame >(),
                            System.type_info < pane_view >()));
-      m_ptemplateHelloMultiverseMain = pDocTemplate;
+      m_ptemplateBeatMapperMain = pDocTemplate;
       add_document_template(pDocTemplate);
 
 
@@ -99,7 +99,7 @@ namespace hellomultiverse
                            System.type_info < document >(),
                            System.type_info < frame >(),
                            System.type_info < main_view >()));
-      m_ptemplateHelloMultiverseView = pDocTemplate;
+      m_ptemplateBeatMapperView = pDocTemplate;
       add_document_template(pDocTemplate);
 
 
@@ -109,7 +109,7 @@ namespace hellomultiverse
                            System.type_info < document >(),
                            System.type_info < frame >(),
                            System.type_info < switcher_view >()));
-      m_ptemplateHelloMultiverseSwitcher = pDocTemplate;
+      m_ptemplateBeatMapperSwitcher = pDocTemplate;
       add_document_template(pDocTemplate);
 
 
@@ -149,17 +149,17 @@ namespace hellomultiverse
 
       m_bMultiverseChat = !handler()->m_varTopicQuery["no_hello_edit"].is_set();
 
-      if (m_ptemplateHelloMultiverseMain->get_document_count() == 0)
+      if (m_ptemplateBeatMapperMain->get_document_count() == 0)
       {
 
-         m_ptemplateHelloMultiverseMain->request_create(pcreate);
+         m_ptemplateBeatMapperMain->request_create(pcreate);
 
       }
 
       if (pcreate->m_spCommandLine->m_varFile.has_char())
       {
 
-         m_ptemplateHelloMultiverseView->request_create(pcreate);
+         m_ptemplateBeatMapperView->request_create(pcreate);
 
       }
 
@@ -170,7 +170,7 @@ namespace hellomultiverse
 
       }
 
-      output_debug_string("\nfinished hellomultiverse::on_request");
+      output_debug_string("\nfinished beatmapper::on_request");
 
    }
 
@@ -198,20 +198,20 @@ namespace hellomultiverse
    }
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 
 
 extern "C"
-::aura::library * app_core_hellomultiverse_get_new_library(::aura::application * papp)
+::aura::library * scorpionilluminati_beatmapper_get_new_library(::aura::application * papp)
 {
 
-   return new ::aura::single_application_library < ::hellomultiverse::application >(papp, "app-core/hellomultiverse");
+   return new ::aura::single_application_library < ::beatmapper::application >(papp, "scorpionilluminati/beatmapper");
 
 }
 
 
-aura_app aura_app_core_hellomultiverse("app-core/hellomultiverse", &app_core_hellomultiverse_get_new_library);
+aura_app aura_scorpionilluminati_beatmapper("scorpionilluminati/beatmapper", &scorpionilluminati_beatmapper_get_new_library);
 
 

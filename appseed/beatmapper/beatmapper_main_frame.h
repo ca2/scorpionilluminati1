@@ -1,11 +1,11 @@
-#pragma once
+﻿#pragma once
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE main_frame :
+   class CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER main_frame :
       virtual public ::sphere::main_frame
    {
    public:
@@ -31,7 +31,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 

@@ -1,11 +1,11 @@
 ﻿#pragma once
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE view :
+   class CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER view :
       virtual public view_base
    {
    public:
@@ -56,11 +56,11 @@ namespace hellomultiverse
       DECL_GEN_SIGNAL(_001OnCreate);
       DECL_GEN_SIGNAL(_001OnDestroy);
 
-      virtual string get_hellomultiverse();
+      virtual string get_beatmapper();
 
-      virtual string get_processed_hellomultiverse();
+      virtual string get_processed_beatmapper();
 
-      virtual void set_hellomultiverse(string strText);
+      virtual void set_beatmapper(string strText);
 
       virtual void defer_check_on_draw_layout();
       virtual void on_draw_image_layer(::draw2d::graphics * pgraphics);
@@ -68,6 +68,6 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 

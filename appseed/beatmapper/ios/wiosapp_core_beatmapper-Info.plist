@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -44,6 +44,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>ca2_command_line</key>
-	<string>app : app=app-core/hellomultiverse client_only hello_bk="http://server.ca2.cc/image/os/non_existent_file(ios).jpg"</string>
+	<string>app : app=app-core/beatmapper client_only hello_bk="http://server.ca2.cc/image/os/non_existent_file(ios).jpg"</string>
 </dict>
 </plist>

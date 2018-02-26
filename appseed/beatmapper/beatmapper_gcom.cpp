@@ -1,7 +1,7 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
@@ -66,7 +66,7 @@ namespace hellomultiverse
 
       SCAST_PTR(::message::create, pcreate, pobj);
 
-      m_id = "hellomultiverse_gcom";
+      m_id = "beatmapper_gcom";
 
       pcreate->previous();
 
@@ -155,7 +155,7 @@ namespace hellomultiverse
 
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 

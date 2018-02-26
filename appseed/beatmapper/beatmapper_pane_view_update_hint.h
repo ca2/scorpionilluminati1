@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
@@ -10,13 +10,13 @@ namespace hellomultiverse
       PaneViewNone,
       PaneViewMenu,
       PaneViewGcom,
-      PaneViewHelloMultiverse,
-      PaneViewHelloMultiverseSwitcher,
+      PaneViewBeatMapper,
+      PaneViewBeatMapperSwitcher,
       PaneViewFileManager
    };
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE pane_view_update_hint :
+   class CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER pane_view_update_hint :
       public object
    {
    public:
@@ -49,7 +49,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 

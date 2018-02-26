@@ -1,11 +1,11 @@
-#pragma once
+﻿#pragma once
 
 
-namespace hellomultiverse
+namespace beatmapper
 {
 
 
-   class CLASS_DECL_APP_CORE_HELLOMULTIVERSE view_base :
+   class CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER view_base :
       virtual public ::user::impact
    {
       public:
@@ -32,8 +32,8 @@ namespace hellomultiverse
 
 
          mutex                   m_mutexText;
-         string                  m_strNewHelloMultiverse;
-         string                  m_strHelloMultiverse;
+         string                  m_strNewBeatMapper;
+         string                  m_strBeatMapper;
 
 
          ::draw2d::dib_sp        m_dibPost;
@@ -83,7 +83,7 @@ namespace hellomultiverse
    };
 
 
-} // namespace hellomultiverse
+} // namespace beatmapper
 
 
 
