@@ -1,0 +1,8 @@
+﻿; app_beatmapper.def
+
+LIBRARY  "scorpionilluminati_beatmapper"
+; For Win32 DLLs, only EXPORTs really required.
+
+EXPORTS
+scorpionilluminati_beatmapper_get_new_library
+
