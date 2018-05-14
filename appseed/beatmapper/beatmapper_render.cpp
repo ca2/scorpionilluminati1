@@ -817,7 +817,7 @@ namespace beatmapper
 
          pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-         pgraphics->BitBlt(rectClient, m_dibTint->get_graphics());
+         pgraphics->draw(rectClient, m_dibTint->get_graphics());
 
       }
 
@@ -1228,7 +1228,7 @@ namespace beatmapper
 
          pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-         pgraphics->BitBlt(null_point(), size(m_cx, m_cy), m_dibFast->get_graphics());
+         pgraphics->draw(size(m_cx, m_cy), m_dibFast->get_graphics());
 
          //pgraphics->FillSolidRect(400,400,100,100,ARGB(128,0,0,128));
 
