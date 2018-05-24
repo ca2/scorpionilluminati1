@@ -23,7 +23,7 @@ namespace beatmapper
 
 
       using ::sphere::main_frame::get_translucency;
-      virtual bool get_translucency(::user::e_translucency & etranslucency, ::user::e_element eelement, ::user::interaction * pui);
+      virtual bool get_translucency(::user::e_translucency & etranslucency, ::user::e_element eelement, ::user::style_context * pui) override;
       virtual sp(::user::wndfrm::frame::frame) create_frame_schema();
 
       virtual bool has_pending_graphical_update();

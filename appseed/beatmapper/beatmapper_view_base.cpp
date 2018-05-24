@@ -15,11 +15,11 @@ namespace beatmapper
       m_mutexText(papp),
       m_fontDrawStatus(allocer())
    {
-      
+
       m_prender = NULL;
-      
+
       m_fontDrawStatus->create_pixel_font("Arial", 20, 400);
-      
+
       m_crDrawStatus = ARGB(255, 255, 255, 0);
 
       m_eeffect                  = effect_none;
@@ -84,7 +84,7 @@ namespace beatmapper
    {
 
    }
-   
+
 
    void view_base::_001OnNcDraw(::draw2d::graphics * pgraphicsParam)
    {
@@ -107,7 +107,7 @@ namespace beatmapper
       if (rectClient.area() <= 0)
          return;
 
-      m_dibPost->create(rectClient.size());
+      m_dibPost->create(rectClient.get_size());
 
       m_dibPost->Fill(00, 00, 00, 00);
 
@@ -257,7 +257,7 @@ namespace beatmapper
 
          GetClientRect(rectClient);
 
-         size s = rectClient.size();
+         size s = rectClient.get_size();
 
          size s2(s.cx / iMult, s.cy / iMult);
 
@@ -274,7 +274,7 @@ namespace beatmapper
             {
 
                pgraphics->set_alpha_mode(::draw2d::alpha_mode_set);
-               
+
                pgraphics->StretchBlt(0, 0, s.cx, s.cy, m_dib1->get_graphics(), 0, 0, s2.cx, s2.cy, SRCCOPY);
 
             }
@@ -284,7 +284,7 @@ namespace beatmapper
                m_dib2->create(s);
 
                m_dib2->get_graphics()->set_alpha_mode(::draw2d::alpha_mode_set);
-               
+
                m_dib2->get_graphics()->StretchBlt(0, 0, s.cx, s.cy, m_dib1->get_graphics(), 0, 0, s2.cx, s2.cy, SRCCOPY);
 
             }

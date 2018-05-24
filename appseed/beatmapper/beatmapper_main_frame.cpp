@@ -17,7 +17,7 @@ namespace beatmapper
 
       m_bWindowFrame = !Application.handler()->m_varTopicQuery.has_property("client_only");
 
-      
+
 
       if (Application.handler()->m_varTopicQuery.has_property("opaque"))
       {
@@ -64,7 +64,7 @@ namespace beatmapper
    sp(::user::wndfrm::frame::frame) main_frame::create_frame_schema()
    {
 
-      
+
 
       //sp(::user::wndfrm::main_frame::main_frame) pschema = Application.wndfrm()->get_frame_schema("wndfrm_core", "001");
 
@@ -86,7 +86,7 @@ namespace beatmapper
    }
 
 
-   bool main_frame::get_translucency(::user::e_translucency & etranslucency, ::user::e_element eelement, ::user::interaction * pui)
+   bool main_frame::get_translucency(::user::e_translucency & etranslucency, ::user::e_element eelement, ::user::style_context * pcontext)
    {
 
       if (m_bExplicitTranslucency)
@@ -111,7 +111,7 @@ namespace beatmapper
 
       //return true;
 
-      return ::user::style::get_translucency(etranslucency, eelement, pui);
+      return ::user::style::get_translucency(etranslucency, eelement, pcontext);
 
    }
 
