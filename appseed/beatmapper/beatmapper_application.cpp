@@ -51,7 +51,7 @@ namespace beatmapper
 
       ::core::session * pcoression = m_pauraapp->m_pcoresession;
 
-      pcoression->will_use_view_hint(::userex::view_font_sel);
+      pcoression->will_use_view_hint("font_sel");
 
       System.factory().creatable_small < ::beatmapper::document >();
       System.factory().creatable_small < ::beatmapper::frame >();
