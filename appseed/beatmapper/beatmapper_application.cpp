@@ -49,7 +49,7 @@ namespace beatmapper
 
       set_local_data();
 
-      ::core::session * pcoression = m_pauraapp->m_pcoresession;
+      ::core::session * pcoression = m_papp->m_psession;
 
       pcoression->will_use_view_hint("font_sel");
 
