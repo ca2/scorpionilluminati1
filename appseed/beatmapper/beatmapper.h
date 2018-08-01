@@ -34,7 +34,7 @@ namespace beatmapper
 
 
 #undef App
-#define App(pbaseapp) (pbaseapp->m_pcoreapp->cast_app < ::beatmapper::application > ())
+#define App(papp) (*papp->cast < ::beatmapper::application > ())
 
 
 #include "beatmapper_render.h"
