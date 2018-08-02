@@ -21,43 +21,14 @@ namespace beatmapper
       };
 
       e_type                                 m_etype;
-      string                                 m_strBeatMapper;
-      string                                 m_strBeatMapperDefault;
-      string                                 m_strAlternateBeatMapper;
-      string                                 m_strAlternateBeatMapperDefault;
 
       bool                                   m_bMultiverseChat;
 
       ::user::document *                     m_pdocMenu;
-//      ::calculator::plain_edit_view *        m_prollfps;
       ::user::plain_edit_view *              m_prollfps;
       ::user::single_document_template *     m_ptemplateBeatMapperMain;
       ::user::single_document_template *     m_ptemplateBeatMapperView;
-      ::user::single_document_template *     m_ptemplateBeatMapperSwitcher;
 
-
-      //::user::split_view *                             m_ptopviewLast;
-      //view *                                 m_pviewLast;
-
-      //::user::split_view *                             m_ptopviewMain;
-      //view *                                 m_pviewMain;
-      //::user::button_view *                          m_ptoggleviewMain;
-      //::user::plain_edit_view *              m_peditMain;
-
-      //::user::split_view *                             m_ptopviewSwitcher;
-      //view *                                 m_pviewSwitcher;
-      //::user::button_view *                          m_ptoggleviewSwitcher;
-      //::user::plain_edit_view *              m_peditSwitcher;
-
-      //::user::split_view *                             m_ptopviewFont;
-      //::user::font_list_view *               m_pfontlistview;
-      //::user::button_view *                          m_ptoggleviewFontSel;
-      //::user::plain_edit_view *              m_peditFontSel;
-
-      mutex                                  m_mutexAiFont;
-      int32_t                                m_iErrorAiFont;
-      bool                                   m_bLoadAiFont;
-      void *                                 m_faceAi; // FT_Face m_faceAi;
 
       application();
       virtual ~application();

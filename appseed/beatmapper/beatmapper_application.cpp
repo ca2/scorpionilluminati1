@@ -5,13 +5,11 @@ namespace beatmapper
 {
 
 
-   application::application() :
-      m_mutexAiFont(this)
+   application::application()
    {
 
       m_ptemplateBeatMapperMain = NULL;
       m_ptemplateBeatMapperView = NULL;
-      m_ptemplateBeatMapperSwitcher = NULL;
 
       m_strAppId = "scorpionilluminati/beatmapper";
       m_strAppName = "scorpionilluminati/beatmapper";
@@ -20,21 +18,7 @@ namespace beatmapper
 
       m_etype = type_normal;
 
-      m_strBeatMapperDefault = "Beat Mapper!!";
-      m_strAlternateBeatMapperDefault = "Hello!!";
-
-      m_strBeatMapper = m_strBeatMapperDefault;
-      m_strAlternateBeatMapper = m_strAlternateBeatMapperDefault;
-
-      m_iErrorAiFont = -1;
-
-      m_bLoadAiFont = false;
-
-      m_faceAi = NULL; // FT_Face m_faceAi;
-
       m_bMultiverseChat = true;
-
-
 
    }
 
@@ -49,7 +33,7 @@ namespace beatmapper
 
       set_local_data();
 
-      ::core::session * pcoression = m_papp->m_psession;
+      ::core::session * pcoression = &Session;
 
       pcoression->will_use_view_hint("font_sel");
 
@@ -59,9 +43,7 @@ namespace beatmapper
       System.factory().creatable_small < ::user::button_view >();
       System.factory().creatable_small < ::beatmapper::view >();
       System.factory().creatable_small < ::beatmapper::main_view >();
-      System.factory().creatable_small < ::beatmapper::switcher_view >();
       System.factory().creatable_small < ::beatmapper::pane_view >();
-      System.factory().creatable_small < ::beatmapper::gcom >();
 
       if (!::sphere::application::init_instance())
       {
@@ -70,18 +52,7 @@ namespace beatmapper
 
       }
 
-      string str = handler()->m_varTopicQuery["beatmapper"];
-
-      if (str.has_char())
-      {
-
-         m_strBeatMapper = str;
-
-      }
-
-
       ::user::single_document_template* pDocTemplate;
-
 
       pDocTemplate = canew(::user::single_document_template(
                            this,
@@ -103,14 +74,6 @@ namespace beatmapper
       add_document_template(pDocTemplate);
 
 
-      pDocTemplate = canew(::user::single_document_template(
-                           this,
-                           "switcher",
-                           System.type_info < document >(),
-                           System.type_info < frame >(),
-                           System.type_info < switcher_view >()));
-      m_ptemplateBeatMapperSwitcher = pDocTemplate;
-      add_document_template(pDocTemplate);
 
 
       return true;

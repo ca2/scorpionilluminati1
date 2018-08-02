@@ -714,6 +714,7 @@
     <ClCompile Include="beatmapper.cpp" />
     <ClCompile Include=".\beatmapper_pane_view.cpp" />
     <ClCompile Include=".\beatmapper_pane_view_update_hint.cpp" />
+    <ClCompile Include="beatmapper_beatmapper.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">Create</PrecompiledHeader>
@@ -723,28 +724,21 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include=".\beatmapper_view.cpp" />
-    <ClCompile Include="beatmapper_gcom.cpp" />
     <ClCompile Include="beatmapper_main_frame.cpp" />
     <ClCompile Include="beatmapper_main_view.cpp" />
-    <ClCompile Include="beatmapper_render.cpp" />
-    <ClCompile Include="beatmapper_switcher_view.cpp" />
-    <ClCompile Include="beatmapper_view_base.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="beatmapper_application.h" />
+    <ClInclude Include="beatmapper_beatmapper.h" />
     <ClInclude Include="beatmapper_document.h" />
     <ClInclude Include="beatmapper_frame.h" />
     <ClInclude Include="beatmapper.h" />
-    <ClInclude Include="beatmapper_gcom.h" />
     <ClInclude Include="beatmapper_main_frame.h" />
     <ClInclude Include="beatmapper_main_view.h" />
     <ClInclude Include="beatmapper_pane_view.h" />
     <ClInclude Include="beatmapper_pane_view_update_hint.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="beatmapper_render.h" />
-    <ClInclude Include="beatmapper_switcher_view.h" />
     <ClInclude Include="beatmapper_view.h" />
-    <ClInclude Include="beatmapper_view_base.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\app-core\appseed\gcom\gcom.vcxproj">

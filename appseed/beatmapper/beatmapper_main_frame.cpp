@@ -11,6 +11,8 @@ namespace beatmapper
       ::sphere::main_frame(papp)
    {
 
+      set_pro_devian();
+
       m_bDefaultCreateToolbar = false;
 
       WfiEnableFullScreen();

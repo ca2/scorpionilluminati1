@@ -9,10 +9,7 @@ namespace beatmapper
    {
       PaneViewNone,
       PaneViewMenu,
-      PaneViewGcom,
-      PaneViewBeatMapper,
-      PaneViewBeatMapperSwitcher,
-      PaneViewFileManager
+      PaneViewBeatMapper
    };
 
 

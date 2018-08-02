@@ -45,9 +45,9 @@ namespace beatmapper
 
    void main_view::on_update(::user::impact * pSender,LPARAM lHint,object* phint)
    {
-      
-       ::user::split_view::on_update(pSender,lHint,phint);
-      
+
+      ::user::split_view::on_update(pSender,lHint,phint);
+
    }
 
 
@@ -123,7 +123,7 @@ namespace beatmapper
 
    }
 
-   
+
    void main_view::_001OnNcDraw(::draw2d::graphics * pgraphics)
    {
 
@@ -148,9 +148,6 @@ namespace beatmapper
 
          if(pevent->m_puie->m_id == "beatmapper_toggle")
          {
-
-            m_pview->m_prender->m_bLite = !m_pview->m_prender->m_bLite;
-
 
             m_pview->on_layout();
 

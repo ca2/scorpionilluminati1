@@ -20,14 +20,14 @@ namespace beatmapper
 
    }
 
-   
+
 
 
 
    void document::assert_valid() const
    {
 
-	   ::user::document::assert_valid();
+      ::user::document::assert_valid();
 
    }
 
@@ -35,7 +35,7 @@ namespace beatmapper
    void document::dump(dump_context & dumpcontext) const
    {
 
-	   ::user::document::dump(dumpcontext);
+      ::user::document::dump(dumpcontext);
 
    }
 
@@ -62,43 +62,6 @@ namespace beatmapper
 
       string strPath = varFile.get_file_path();
 
-      varFile["url"] = strPath;
-
-      varFile["http_set"]["raw_http"] = true;
-      varFile["http_set"]["disable_common_name_cert_check"] = true;
-
-      string str;
-
-      if(pview->m_prender->m_dibImage.load_from_file(varFile))
-      {
-
-         get_typed_view < view >()->m_strImage = varFile["url"];
-
-         {
-
-            synch_lock slText(get_typed_view < view >() != NULL  ? &get_typed_view < view >()->m_mutexText : NULL);
-
-            get_typed_view < view >()->m_strBeatMapper = "image:" + get_typed_view < view >()->m_strImage + "," + get_typed_view < view >()->m_strBeatMapper;
-
-            get_typed_view < view >()->set_need_layout(true);
-
-         }
-
-      }
-      else if(get_typed_view < ::user::plain_edit_view >() != NULL
-         && Application.file().exists(varFile)
-         && (str = Application.file().as_string(varFile)).has_char())
-      {
-
-         get_typed_view < ::user::plain_edit_view >()->_001SetText(str.Left(84),::action::source_user);
-
-      }
-      else if(get_typed_view < ::userex::pane_tab_view >() != NULL)
-      {
-
-         get_typed_view < ::userex::pane_tab_view >()->set_cur_tab_by_id(::beatmapper::PaneViewBeatMapper);
-
-      }
 
       return true;
 

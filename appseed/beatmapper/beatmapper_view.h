@@ -6,23 +6,12 @@ namespace beatmapper
 
 
    class CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER view :
-      virtual public view_base
+      virtual public ::user::impact
    {
    public:
 
 
-      string                  m_strServer;
-      ::visual::dib_sp        m_dibAi1;
-      ::visual::dib_sp        m_dibAi2;
-
-      string                  m_strImage;
-      ::draw2d::dib_sp        m_dibColor;
-
-      bool                    m_bOkPending;
-
-
-      bool                    m_bHelloLayoutOn001Layout;
-      bool                    m_b001LayoutIgnoreEmpty;
+      sp(beatmapper)       m_pbeatmapper;
 
 
       view(::aura::application * papp);
@@ -42,28 +31,16 @@ namespace beatmapper
 
       virtual void install_message_routing(::message::sender * psender);
 
-      virtual void _001OnHelloDraw(::draw2d::graphics * pgraphics);
+      virtual void _001OnDraw(::draw2d::graphics * pgraphics);
 
       virtual void on_update(::user::impact * pSender, LPARAM lHint, object* pHint);
 
       ::user::document * get_document();
 
-
-
       virtual void on_layout();
 
-      DECL_GEN_SIGNAL(_001OnLayout);
       DECL_GEN_SIGNAL(_001OnCreate);
       DECL_GEN_SIGNAL(_001OnDestroy);
-
-      virtual string get_beatmapper();
-
-      virtual string get_processed_beatmapper();
-
-      virtual void set_beatmapper(string strText);
-
-      virtual void defer_check_on_draw_layout();
-      virtual void on_draw_image_layer(::draw2d::graphics * pgraphics);
 
    };
 

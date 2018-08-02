@@ -8,9 +8,9 @@
 #include "app-core/appseed/gcom/gcom/gcom.h"
 
 #ifdef _SCORPIONILLUMINATI_BEATMAPPER_LIBRARY
-   #define CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER  CLASS_DECL_EXPORT
+#define CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER  CLASS_DECL_EXPORT
 #else
-   #define CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER  CLASS_DECL_IMPORT
+#define CLASS_DECL_SCORPIONILLUMINATI_BEATMAPPER  CLASS_DECL_IMPORT
 #endif
 
 
@@ -37,20 +37,19 @@ namespace beatmapper
 #define App(papp) (*papp->cast < ::beatmapper::application > ())
 
 
-#include "beatmapper_render.h"
+#include "beatmapper_beatmapper.h"
+
 
 #include "beatmapper_document.h"
-#include "beatmapper_view_base.h"
-#include "beatmapper_gcom.h"
 #include "beatmapper_view.h"
-//#include "beatmapper_lite_view.h"
-//#include "beatmapper_full_view.h"
 #include "beatmapper_main_view.h"
-#include "beatmapper_switcher_view.h"
 #include "beatmapper_frame.h"
 #include "beatmapper_main_frame.h"
 #include "beatmapper_pane_view_update_hint.h"
 #include "beatmapper_pane_view.h"
 
+
 #include "beatmapper_application.h"
+
+
 

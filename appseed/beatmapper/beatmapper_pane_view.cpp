@@ -14,9 +14,6 @@ namespace beatmapper
    {
 
       m_pviewLast = NULL;
-      m_pviewLastBilbo = NULL;
-      m_prollfps = NULL;
-      m_pviewdataTopic = NULL;
 
    }
 
@@ -55,25 +52,18 @@ namespace beatmapper
 
    void pane_view::_001OnCreate(::message::message * pobj)
    {
+
       if(pobj->previous())
          return;
 
       set_tab("Menu",::beatmapper::PaneViewMenu);
-      set_tab("gcom", ::beatmapper::PaneViewGcom);
       set_tab("beatmapper", ::beatmapper::PaneViewBeatMapper);
-      set_tab("switcher",::beatmapper::PaneViewBeatMapperSwitcher);
       set_tab("Font","font_sel");
-#if 1
       set_tab("Open", "file_manager");
-#endif
 
-      //set_cur_tab_by_id(::beatmapper::PaneViewGcom);
       set_cur_tab_by_id(::beatmapper::PaneViewBeatMapper);
 
-
-
    }
-
 
 
    void pane_view::_001OnNcDraw(::draw2d::graphics * pgraphics)
@@ -98,8 +88,6 @@ namespace beatmapper
       ::userex::pane_tab_view::on_show_view();
       string strId = get_view_id();
       stringa stra;
-      m_prollfps = NULL;
-      m_checkptraBilbo.remove_all();
 
       stra.explode("->:<-",strId);
 
@@ -110,15 +98,8 @@ namespace beatmapper
 
       }
 
-      if(get_view_id() == ::beatmapper::PaneViewGcom
-            || get_view_id() == ::beatmapper::PaneViewBeatMapper
-            || get_view_id() == ::beatmapper::PaneViewBeatMapperSwitcher
-            || stra.contains(::str::from((int)::beatmapper::PaneViewGcom))
-            || stra.contains(::str::from((int)::beatmapper::PaneViewBeatMapper))
-            || stra.contains(::str::from((int)::beatmapper::PaneViewBeatMapperSwitcher)))
+      if(get_view_id() == ::beatmapper::PaneViewBeatMapper)
       {
-
-
 
          if(get_pane_by_id("file_manager") != NULL && get_pane_by_id("file_manager")->m_pholder != NULL)
          {
@@ -135,91 +116,21 @@ namespace beatmapper
          }
 
          m_pviewLast = NULL;
-         m_pviewLastBilbo = NULL;
 
-
-
-         if(get_view_id() == ::beatmapper::PaneViewGcom)
+         if(get_view_id() == ::beatmapper::PaneViewBeatMapper)
          {
 
-            m_pviewLast = dynamic_cast < view_base * > (get_pane_by_id(::beatmapper::PaneViewGcom)->m_pholder->get_child_by_id("beatmapper_gcom"));
-            m_pviewdataTopic = m_pviewdata;
-            m_strTopicTitle = get_pane_by_id(::beatmapper::PaneViewGcom)->m_straTitle.implode(" ");
-
-         }
-         else if(get_view_id() == ::beatmapper::PaneViewBeatMapper)
-         {
-
-            m_pviewLast = dynamic_cast < view_base * > (get_pane_by_id(::beatmapper::PaneViewBeatMapper)->m_pholder->get_child_by_id("beatmapper_view"));
-            m_pviewLastBilbo = dynamic_cast < view * > (get_pane_by_id(::beatmapper::PaneViewBeatMapper)->m_pholder->get_child_by_id("beatmapper_view"));
+            m_pviewLast = dynamic_cast < view * > (get_pane_by_id(::beatmapper::PaneViewBeatMapper)->m_pholder->get_child_by_id("beatmapper_view"));
             m_pviewLast->set_need_layout();
-            m_pviewdataTopic = m_pviewdata;
             m_strTopicTitle = get_pane_by_id(::beatmapper::PaneViewBeatMapper)->m_straTitle.implode(" ");
 
          }
-         else if (get_view_id() == ::beatmapper::PaneViewBeatMapperSwitcher)
-         {
-
-            m_pviewLast = dynamic_cast < view_base * > (get_pane_by_id(::beatmapper::PaneViewBeatMapperSwitcher)->m_pholder->get_child_by_id("beatmapper_view"));
-            m_pviewLastBilbo = dynamic_cast < view * > (get_pane_by_id(::beatmapper::PaneViewBeatMapperSwitcher)->m_pholder->get_child_by_id("beatmapper_view"));
-            m_pviewLast->set_need_layout();
-            m_pviewdataTopic = m_pviewdata;
-            m_strTopicTitle = get_pane_by_id(::beatmapper::PaneViewBeatMapperSwitcher)->m_straTitle.implode(" ");
-
-         }
-
 
       }
       else if (get_view_id() == ::beatmapper::PaneViewMenu)
       {
 
-         //::user::tab_pane * ppane = get_pane(id_pane(get_view_id()));
-
-         ::file::path path = prepare_menu_view();
-
-         m_pdocMenu->open_document(path);
-
-//         if (m_pviewdata->m_pwnd != NULL)
-//         {
-//
-//            m_pviewdata->m_pwnd->ShowWindow(SW_HIDE);
-//
-//         }
-
-         string str;
-
-         ::user::impact * pview = m_pdocMenu->get_view(0);
-
-         m_prollfps = dynamic_cast <::calculator::plain_edit_view *> (pview->get_child_by_id("roll_fps"));
-
-         m_pviewLast->data_get("cur_fps_text", str);
-
-         if (m_prollfps != NULL)
-         {
-
-            m_prollfps->_001SetText(str, ::action::source_database);
-
-         }
-
-         if (m_pviewLastBilbo != NULL)
-         {
-
-            int i = 1;
-
-            for (auto & bilbo : m_pviewLastBilbo->m_prender->m_bilboa)
-            {
-
-               sp(::user::check_box) pcheck = pview->get_child_by_id("bilbo" + ::str::from(i));
-
-               m_checkptraBilbo.add(pcheck);
-
-               m_checkptraBilbo.last()._001SetCheck(bilbo.m_b ? ::check::checked : ::check::unchecked, ::action::source_sync);
-
-               i++;
-
-            }
-
-         }
+         m_pdocMenu->open_document("matter://menu.html");
 
       }
       else if (get_view_id() == "font_sel")
@@ -230,15 +141,13 @@ namespace beatmapper
          if (m_pviewLast != NULL && pfontview.is_set())
          {
 
-            pfontview->set_sel_by_name(m_pviewLast->m_prender->m_strFont);
+            pfontview->set_sel_by_name(m_pviewLast->m_pbeatmapper->m_strFont);
 
          }
 
       }
 
-
    }
-
 
 
    void pane_view::on_create_view(::user::view_creator_data * pcreatordata)
@@ -255,60 +164,12 @@ namespace beatmapper
 
          m_pviewdata->m_pwnd = pview->GetParentFrame();
 
-
-         //::file::path path = prepare_menu_view();
-
-         //m_pdocMenu->open_document(path);
-
-
-//         m_prollspf = pview->get_child_by_id("roll_spf");
-         //try
-         //{
-         //   pform->get_child_by_id("clockverse_auto")->_001SetCheck(Application.should_auto_launch_clockverse_on_hover(),::action::source_initialize);
-         //}
-         //catch(...)
-         //{
-         //}
-
-         //try
-         //{
-         //   pform->get_child_by_id("flag")->_001SetCheck(Application.should_bind_flag_country_ca2_domain_image_on_hover(),::action::source_initialize);
-         //}
-         //catch(...)
-         //{
-         //}
-
-         //try
-         //{
-         //   pform->get_child_by_id("flag_auto")->_001SetCheck(Application.should_auto_launch_flag_on_hover(),::action::source_initialize);
-         //}
-         //catch(...)
-         //{
-         //}
-
-
-
       }
-      break;
-      case PaneViewGcom:
-      {
-         create_view < gcom >(pcreatordata);
-
-
-      }
-
       break;
       case PaneViewBeatMapper:
       {
 
          Application.m_ptemplateBeatMapperView->create_subdocument(pcreatordata);
-
-      }
-      break;
-      case PaneViewBeatMapperSwitcher:
-      {
-
-         Application.m_ptemplateBeatMapperSwitcher->create_subdocument(pcreatordata);
 
       }
       break;
@@ -327,79 +188,6 @@ namespace beatmapper
 
          if(pevent->m_eevent == ::user::event_after_change_text)
          {
-
-            if(m_prollfps != NULL && pevent->m_puie->m_id == "roll_fps" && !pevent->m_actioncontext.is_source(::action::source_initialize)
-                  && !pevent->m_actioncontext.is_source(::action::source_database))
-            {
-
-               try
-               {
-                  string str;
-                  double d = m_prollfps->get_ex_value()["real"];
-                  if(m_pviewLast != NULL)
-                  {
-
-
-                     {
-
-                        string str;
-
-                        m_prollfps->_001GetText(str);
-
-                        m_pviewLast->data_set("cur_fps_text",str);
-
-                     }
-
-                     {
-
-                        var v;
-
-                        v = d;
-
-                        m_pviewLast->data_set("cur_fps",v);
-
-                     }
-                     m_pviewLast->m_dFps = d;
-                     m_pviewLast->m_dwRoll = ::get_tick_count();
-                  }
-                  //if(fabs(d) < 0.0000000001)
-                  //{
-                  //   m_prollspf->_001SetText("",::action::source_initialize);
-                  //}
-                  //else
-                  //{
-                  //   m_prollspf->_001SetText(::str::from(1.0/d),::action::source_initialize);
-                  //}
-               }
-               catch(...)
-               {
-               }
-
-            }
-            //else if(pevent->m_puie->m_id == "roll_spf" && !pevent->m_actioncontext.is_source(::action::source_initialize))
-            //{
-
-            //   try
-            //   {
-            //      string str;
-            //      m_prollspf->_001GetText(str);
-            //      double d = atof(str);
-            //      if(fabs(d) < 0.0000000001)
-            //      {
-            //         m_prollfps->_001SetText("",::action::source_initialize);
-            //      }
-            //      else
-            //      {
-            //         m_pflagview->m_dFps = 1.0/ d;
-            //         m_pflagview->m_dwRoll = ::get_tick_count();
-            //         m_prollfps->_001SetText(::str::from(1.0 / d),::action::source_initialize);
-            //      }
-            //   }
-            //   catch(...)
-            //   {
-            //   }
-
-            //}
 
 
          }
@@ -420,110 +208,15 @@ namespace beatmapper
 
                   sp(::user::check) pcheck = pevent->m_puie;
 
-                  if (m_pviewLastBilbo != NULL && pcheck.is_set())
-                  {
-
-                     m_pviewLastBilbo->m_prender->m_bilboa[iCheck - 1].m_bNew = pcheck->_001GetCheck() == ::check::checked;
-
-                     m_pviewLastBilbo->m_prender->defer_update_bilbo();
-
-                  }
-
                }
 
             }
 
          }
 
-         //if(pevent->m_puie->m_id == "clockverse")
-         //   {
-         //      Application.set_binding_clockverse_country_time_zone_set_on_hover(pevent->m_puie->_001GetCheck() == ::check::checked);
-         //      return true;
-         //   }
-         //   else if(pevent->m_puie->m_id == "clockverse_auto")
-         //   {
-         //      Application.set_auto_launch_clockverse_on_hover(pevent->m_puie->_001GetCheck() == ::check::checked);
-         //      return true;
-         //   }
-         //   else if(pevent->m_puie->m_id == "flag")
-         //   {
-         //      Application.set_binding_flag_country_ca2_domain_image_on_hover(pevent->m_puie->_001GetCheck() == ::check::checked);
-         //      return true;
-         //   }
-         //   else if(pevent->m_puie->m_id == "flag_auto")
-         //   {
-         //      Application.set_auto_launch_flag_on_hover(pevent->m_puie->_001GetCheck() == ::check::checked);
-         //      return true;
-         //   }
-         //}
       }
 
       return false;
-   }
-
-
-   ::file::path pane_view::prepare_menu_view()
-   {
-
-      string str;
-
-      string strBilbo;
-
-      if (m_pviewLast == NULL && m_pviewLastBilbo == NULL)
-      {
-
-         str = Application.file().as_string("matter://home.html");
-
-      }
-      else
-      {
-
-         str = Application.file().as_string("matter://menu.html");
-
-      }
-
-      if (m_pviewLastBilbo != NULL)
-      {
-
-         int i = 1;
-
-         for (auto & bilbo : m_pviewLastBilbo->m_prender->m_bilboa)
-         {
-
-            ::file::path path = bilbo.m_strPath;
-
-            string strName = path.name();
-
-            strBilbo += "<input type=\"checkbox\" id=\"bilbo" + str::from(i) + "\" />bilbo &quot;" + strName + "&quot;<br/>\n<br/>";
-
-            i++;
-
-         }
-
-      }
-
-      if (m_strTopicTitle.has_char())
-      {
-
-         str.replace("Hellomultiverse!!", m_strTopicTitle);
-
-      }
-      else
-      {
-
-         str.replace("Hellomultiverse!!", "");
-
-      }
-
-      str.replace("***bilbo***", strBilbo);
-
-      ::file::path path;
-
-      path = System.dir().appdata() / "beatmapper_menu.html";
-
-      Application.file().put_contents(path, str);
-
-      return path;
 
    }
 
@@ -546,33 +239,11 @@ namespace beatmapper
 
                string strFont = m_pfontview->m_pview->get_cur_sel_face_name();
 
-               if (strFont.has_char())
-               {
-
-                  m_pviewLast->m_prender->m_strHoverFont = strFont;
-
-                  m_pviewLast->m_prender->m_strNewFont = strFont;
-
-                  m_pviewLast->data_set("cur_font", strFont);
-
-                  m_pviewLast->set_need_layout();
-
-               }
-
             }
             else if (puh->m_pusercontrolevent->m_eevent == ::user::event_after_change_cur_hover)
             {
 
                string strFont = m_pfontview->m_pview->get_cur_hover_face_name();
-
-               if (strFont.has_char())
-               {
-
-                  m_pviewLast->m_prender->m_strHoverFont = strFont;
-
-                  m_pviewLast->set_need_layout();
-
-               }
 
             }
 

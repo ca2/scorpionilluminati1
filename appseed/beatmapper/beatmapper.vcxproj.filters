@@ -37,19 +37,10 @@
     <ClCompile Include="beatmapper_main_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="beatmapper_switcher_view.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="beatmapper_render.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="beatmapper_view_base.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="beatmapper_gcom.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="beatmapper_main_frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="beatmapper_beatmapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -81,19 +72,10 @@
     <ClInclude Include="beatmapper_main_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="beatmapper_switcher_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="beatmapper_render.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="beatmapper_view_base.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="beatmapper_gcom.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="beatmapper_main_frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="beatmapper_beatmapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
