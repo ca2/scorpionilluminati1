@@ -5,9 +5,9 @@ namespace beatmapper
 {
 
 
-   enum EPaneView
+   enum e_pane_view
    {
-      PaneViewNone,
+      pane_view_none,
       PaneViewMenu,
       PaneViewBeatMapper
    };
@@ -22,15 +22,15 @@ namespace beatmapper
       enum e_type
       {
 
-         TypeNone,
+         type_none,
          TypeGetView,
-         TypeSetView,
+         type_set_view,
          TypeOnShowKaraoke,
          TypeOnShowView,
 
       };
 
-      EPaneView m_eview;
+      e_pane_view m_eview;
       e_type m_etype;
 
 

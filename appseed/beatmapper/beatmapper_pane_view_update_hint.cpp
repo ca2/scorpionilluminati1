@@ -7,8 +7,9 @@ namespace beatmapper
 
    pane_view_update_hint::pane_view_update_hint()
    {
-      m_eview = PaneViewNone;
-      m_etype = TypeNone;
+
+      m_eview = pane_view_none;
+      m_etype = type_none;
 
    }
 
