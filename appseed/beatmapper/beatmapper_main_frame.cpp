@@ -8,10 +8,9 @@ namespace beatmapper
    main_frame::main_frame(::aura::application * papp) :
       object(papp),
       simple_frame_window(papp),
+      simple_main_frame(papp),
       ::sphere::main_frame(papp)
    {
-
-      set_pro_devian();
 
       m_bDefaultCreateToolbar = false;
 
